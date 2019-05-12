@@ -1,12 +1,8 @@
 ---
 layout: default
 title: Blog
+display_title: Blog Posts by Dan
 ---
-<div class="row flex-left">
-    <h1 class="padding-left-large text-muted margin-top-none
-      margin-bottom-none">Blog Posts</h1>
-</div>
-<hr/>
 <div class="row flex-spaces">
   {% assign published_posts = site.posts | where: 'published', true %}
   {% if published_posts.size > 0 %}
@@ -18,7 +14,7 @@ title: Blog
     </div>
     {% endfor %}
   {% else %}
-  <p class="text-primary">Oh no! We've got no posts for ya! :scream_cat:</p>
+  <p class="padding-large text-primary">Oh no! We've got no posts for ya! :scream_cat:</p>
   {% endif %}
 </div>
 
