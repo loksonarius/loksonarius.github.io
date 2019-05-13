@@ -1,4 +1,9 @@
+author: dan
+timezone: America/New_York
 theme: jekyll-theme-tactile
-exclude: [gems]
+
+exclude:
+  - gems
+
 plugins:
   - jemoji

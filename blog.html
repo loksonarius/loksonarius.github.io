@@ -7,14 +7,21 @@ display_title: Blog Posts by Dan
   {% assign published_posts = site.posts | where: 'published', true %}
   {% if published_posts.size > 0 %}
     {% for post in published_posts %}
-    <div class="card" style="width: 20rem;">
-      <h4 class="text-primary">{{ post.title }}</h4>
-      <p class="text-muted">{{ post.excerpt }}</p>
-      <a href="{{ post.url }}" class="paper-btn">Let's read this!</a>
+    <div class="card" style="width: 25rem;">
+      <div class="card-body">
+        <h4 class="card-title">
+          {{ post.title }}
+        </h4>
+        <p class="card-text">
+          {{ post.excerpt }}
+        </p>
+        <a href="{{ post.url }}" class="paper-btn">
+          Let's read this!
+        </a>
+      </div>
     </div>
     {% endfor %}
   {% else %}
   <p class="padding-large text-primary">Oh no! We've got no posts for ya! :scream_cat:</p>
   {% endif %}
 </div>
-

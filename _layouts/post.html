@@ -1,0 +1,19 @@
+---
+layout: base
+---
+{% include header.html %}
+<hr/>
+<div class="row flex-center padding-bottom-none">
+  <article class="article col col-9">
+    <p class="article-meta text-muted margin-bottom-none">
+      Published {{ page.date | date_to_string }} ||
+      Written by <a href="about text-primary">Dan</a>
+    </p>
+    <p class="text-primary margin-top-none">
+      {{ content }}
+    </p>
+  </article>
+</div>
+{% include blog_nav.html %}
+<hr/>
+{% include footer.html %}
