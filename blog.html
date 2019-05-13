@@ -15,7 +15,8 @@ display_title: Blog Posts by Dan
         <p class="card-text">
           {{ post.excerpt }}
         </p>
-        <a href="{{ post.url }}" class="paper-btn">
+        <a href="{{ post.url }}" class="paper-btn"
+        title="Read '{{ post.title }}'">
           Let's read this!
         </a>
       </div>
