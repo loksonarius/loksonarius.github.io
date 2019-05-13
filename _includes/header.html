@@ -1,4 +1,4 @@
-<div class="row flex-edges">
+<div class="row flex-left">
   {% capture title %}
     {% if page.display_title %}
       {{ page.display_title }}
@@ -10,7 +10,9 @@
   margin-bottom-none">
     {{ title | replace: "Dan", '<strong class="text-primary">Dan</strong>' }}
   </h1>
-  <a href="/" class="paper-btn btn-small margin-right-large">
+</div>
+<div class="row flex-spaces">
+  <a href="/" class="paper-btn btn-small align-top">
     :house:
   </a>
 </div>
