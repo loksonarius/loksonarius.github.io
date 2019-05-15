@@ -2,9 +2,8 @@
 layout: post
 published: true
 ---
-After avoid the writing of this site for ages, I've finally plopped down and
-hashed it out in a few days, neglecting to do much of anything else in the
-process.
+After writing this site for ages, I've finally plopped down and hashed it out
+in a few days, neglecting to do much of anything else in the process.
 
 As of right now, the site's pretty simple -- not as lean as I'd like it, but it
 gets the job done. I've still got to finish up the summary and resume page of
