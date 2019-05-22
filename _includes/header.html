@@ -1,4 +1,4 @@
-<div class="row flex-left">
+<div class="row flex-left margin-top-small">
   {% capture title %}
     {% if page.display_title %}
       {{ page.display_title }}
@@ -6,8 +6,8 @@
       {{ page.title }}
     {% endif %}
   {% endcapture %}
-  <h1 class="padding-left-large text-muted margin-top-none
-  margin-bottom-none">
+  <h1 class="padding-left-large text-muted
+    margin-top-none margin-bottom-none">
     {{ title | replace: "Dan", '<strong class="text-primary">Dan</strong>' }}
   </h1>
 </div>
