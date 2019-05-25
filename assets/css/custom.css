@@ -19,6 +19,8 @@ table tbody tr td {
   vertical-align: middle;
 }
 
+/* Justify Paragraphs
+--------------------- */
 p {
   text-align: justify;
   text-justify: inter-word;
