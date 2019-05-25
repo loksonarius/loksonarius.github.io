@@ -3,10 +3,27 @@ layout: default
 title: About
 display_title: Who's Dan?
 ---
-<div class="row flex-spaces">
-  <p class="padding-large">
-    That's a toughie... tell ya what: I'll think on it for a bit and get back to
-    you later :thinking:
-  </p>
+{% capture gravatar_uri %}https://www.gravatar.com/avatar/{{ site.data.contact.gravatar }}.jpg?s=150{% endcapture %}
+<div class="row flex-center">
+  <img class="align-middle margin-large"
+    title="Me IRL"
+    src="{{ gravatar_uri }}"
+  />
+  <p class="align-middle">Here's where I give the skinny on my life</p>
 </div>
 
+<div class="row flex-left tabs">
+  <input id="tab1" type="radio" name="tabs" checked>
+  <label for="tab1" class="col col-6">Techromancy</label>
+
+  <input id="tab2" type="radio" name="tabs">
+  <label for="tab2" class="col col-6">Splatoon</label>
+
+  <div class="content" id="content1">
+    {% include techromancy.html %}
+  </div>
+
+  <div class="content" id="content2">
+    {% include splatoon.html %}
+  </div>
+</div>
