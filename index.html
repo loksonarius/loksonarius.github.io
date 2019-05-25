@@ -2,6 +2,9 @@
 layout: home
 title: Home
 ---
+{% capture github_uri %}https://github.com/{{ site.data.contact.github }}{% endcapture %}
+{% capture twitter_uri %}https://twitter.com/{{ site.data.contact.twitter }}{% endcapture %}
+{% capture twitch_uri %}https://twitch.tv/{{ site.data.contact.twitch }}{% endcapture %}
 <div class="row flex-right margin-top-small">
     <h1 class="salute padding-right-large text-muted
       margin-top-none margin-bottom-none">
@@ -18,9 +21,9 @@ title: Home
   </p>
 </div>
 <div class="row flex-spaces">
-  <a href="https://github.com/loksonarius" title="GitHub" class="paper-btn">GitHub</a>
-  <a href="https://twitter.com/LokSonarius" title="Twitter" class="paper-btn">Twitter</a>
-  <a href="https://www.twitch.tv/loktopicsonarius/" title="Twitch" class="paper-btn">Twitch</a>
+  <a href="{{ github_uri }}" title="GitHub" class="paper-btn">GitHub</a>
+  <a href="{{ twitter_uri }}" title="Twitter" class="paper-btn">Twitter</a>
+  <a href="{{ twitch_uri }}" title="Twitch" class="paper-btn">Twitch</a>
 </div>
 <div class="row flex-spaces">
   <a href="about" title="About Me" class="paper-btn">About Me</a>
