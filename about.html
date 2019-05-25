@@ -13,17 +13,17 @@ display_title: Who's Dan?
 </div>
 
 <div class="row flex-left tabs">
-  <input id="tab1" type="radio" name="tabs" checked>
+  <input id="tab1" type="radio" name="tabs">
   <label for="tab1" class="col col-6">Techromancy</label>
 
   <input id="tab2" type="radio" name="tabs">
   <label for="tab2" class="col col-6">Splatoon</label>
 
-  <div class="content" id="content1">
+  <div class="content col-12" id="content1">
     {% include techromancy.html %}
   </div>
 
-  <div class="content" id="content2">
+  <div class="content col-12" id="content2">
     {% include splatoon.html %}
   </div>
 </div>
