@@ -25,3 +25,15 @@ p {
   text-align: justify;
   text-justify: inter-word;
 }
+
+/* Darken Card Boders
+--------------------- */
+.card {
+  border: 2px solid #41403e;
+}
+
+/* Soften Background
+-------------------- */
+body {
+  background-color: #fffcf4
+}
