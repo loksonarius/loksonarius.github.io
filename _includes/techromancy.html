@@ -1,0 +1,84 @@
+<div class="margin-left-large margin-right-large">
+  <h2>Education</h2>
+
+  <p>
+  Here's where I detail how I learned Java in Highschool, got into algorithmic
+  programming contests, and graduated a scholarship off that with a degree in
+  Computer Science.
+  </p>
+</div>
+
+<div class="margin-left-large margin-right-large">
+  <h2>Career</h2>
+
+  <p>
+  Details on work history -- starting with perpetual Internship at Ultimate
+  Software into a DevOps-focused team learning modern deployment and operations
+  practices as a software developer.
+  </p>
+</div>
+
+<div class="margin-left-large margin-right-large">
+  <h2>Interests</h2>
+
+  <div class="row flex-spaces">
+    {% assign topics = site.data.about.techromancy.topics | sort: "name" %}
+    {% for topic in topics %}
+      <div class="col md-col-6 sm-col-12">
+        <h3>{{ topic.name }}</h3>
+
+        <div class="row flex-spaces">
+          <div class="col">
+            <p>Amount of Interest</p>
+            {% assign percent = topic.interest | divided_by: 5.0 | times: 100 | round %}
+            <div class="progress margin-bottom">
+              <div class="bar w-{{ percent }}"></div>
+            </div>
+          </div>
+
+          <div class="col">
+            <p>Amount of Experience</p>
+            {% assign percent = topic.competence | divided_by: 5.0 | times: 100 | round %}
+            <div class="progress margin-bottom">
+              <div class="bar w-{{ percent }}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+<div class="margin-left-large margin-right-large">
+  <h2>Technologies</h2>
+
+  <div class="row">
+    {% assign groups = site.data.about.techromancy.technologies | sort: "name" %}
+    {% for group in groups %}
+      <div class="collapsible col col-12">
+        {% assign slug = group.name | downcase | replace: " ", "_" %}
+        <input id="collapsible_{{ slug }}" type="checkbox" name="collapsible">
+        <label for="collapsible_{{ slug }}" class="title">{{ group.name }}</label>
+        <div class="collapsible-body">
+          <table class="table-hover">
+            <thead>
+              <tr>
+                <th>Technology</th>
+                <th>Years of Experience</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% assign techs = group.techs | sort: "experience" | reverse %}
+            {% for tech in techs %}
+              <tr>
+                <td class="title">{{ tech.name }}</td>
+                <td>{{ tech.experience }}</td>
+              </tr>
+            {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
