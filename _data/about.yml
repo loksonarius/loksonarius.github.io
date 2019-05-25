@@ -92,25 +92,30 @@ techromancy:
           experience: 1
 
 splatoon:
-  bio:
-    ign: Sonarius
-    age: 21
-    level: 17s
-    region: US East
-    playtime: 720 hours
-    playstyle: Backliner & Flex
-  experience:
-    callouts: Yes
-    teams:
-      - Here's Woomy
-      - 20PewPew
-      - Prawn Stars
-      - Kensa Pavillion
+  ign: Sonarius
+  properties:
+    - name: ':chart_with_upwards_trend:'
+      value: '17 :star:'
+    - name: ':globe_with_meridians:'
+      value: ':us: US East'
+    - name: ':clock3:'
+      value: '720+ hours'
+    - name: ':arrow_up_small:'
+      value: 'Backliner & Flex'
+  teams:
+    - Here's Woomy
+    - 20PewPew
+    - Prawn Stars
+    - Kensa Pavillion
   solo_rankings:
-    splat_zones: 2131
-    tower_control: 2244
-    rainmaker: 2125
-    clam_blitz: 2267
+    - name: splat-zones
+      value: 2131
+    - name: tower-control
+      value: 2244
+    - name: rainmaker
+      value: 2125
+    - name: clam-blitz
+      value: 2267
   availability:
     sunday:
       start: 1500
@@ -133,11 +138,28 @@ splatoon:
     saturday:
       start: 1500
       end: 2200
-  weapon_proficiences:
-    brellas: 20
-    chargers: 60
-    dualies: 10
-    rollers: 10
-    shooters: 30
-    sloshers: 15
-    splatlings: 60
+  top_weapons:
+    - Bamboo MKI
+    - Inkbrush
+    - Splatcharger
+    - Splatershot Jr.
+    - Splatling Deco
+  class_proficiences:
+    - name: blasters
+      value: 20
+    - name: brellas
+      value: 20
+    - name: brushes
+      value: 40
+    - name: chargers
+      value: 60
+    - name: dualies
+      value: 10
+    - name: rollers
+      value: 30
+    - name: shooters
+      value: 30
+    - name: sloshers
+      value: 15
+    - name: splatlings
+      value: 60

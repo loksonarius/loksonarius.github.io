@@ -1,43 +1,78 @@
 <div class="margin-left-large margin-right-large">
-  <h2>Education</h2>
+  <h2 class="margin-top-none margin-bottom-none">Education</h2>
 
   <p>
-  Here's where I detail how I learned Java in Highschool, got into algorithmic
-  programming contests, and graduated a scholarship off that with a degree in
-  Computer Science.
+    I picked up Java in highschool as part of taking AP Computer Science. Maybe
+    not the easiest language to understand at the time, but I was motivated
+    enough to take on projects like custom Minecraft Bukkit plugins and
+    from-scratch Entity Component Systems and Game Engines. Most projects I took
+    on had me in way over my head, so naturally, I was rarely able to handle the
+    complexity of the problems I took on. I did end up learning tons from these
+    experiences as I became exposed to Software Design principles, OOP, and
+    other methodologies for tackling complexity.
+  </p>
+
+  <p>
+    Upon entering college, I got into competitive algorithmic problem solving.
+    While I wasn't terribly well-ranked, it did help me improve my problem
+    solving skills and exposed me to subjects like Computational Geometry,
+    Dynamic Programming, and other problem domains. I got a scholarship for my
+    involvement in the school's competitive programming team which helped me in
+    getting my Bachelor's in Computer Science.
+  </p>
+
+  <p>
+    My favorite classes from my program included Computer Graphics, Theory of
+    Algorithms, Principles of Programming Languages, and Computer Networking.
   </p>
 </div>
 
 <div class="margin-left-large margin-right-large">
-  <h2>Career</h2>
+  <h2 class="margin-top-none margin-bottom-none">Career</h2>
 
   <p>
-  Details on work history -- starting with perpetual Internship at Ultimate
-  Software into a DevOps-focused team learning modern deployment and operations
-  practices as a software developer.
+    While in my first year of college, I joined Ultimate Software as an intern.
+    I moved through a development team and a support team before I started my
+    work in a DevOps-focused team. After interning for over 2 years, I finally
+    joined full time before graduating from college.
+  </p>
+
+  <p>
+    My work at Ultimate focuses on developing and operating tooling and services
+    that are consumed by internal development teams. I've written appliance
+    configuration code in Chef, worked on an in-house deployment platform using
+    Python and Terraform, and am currently focused on developing our internal
+    Kubernetes offering to keep parity with our public cloud alternative.
+  </p>
+
+  <p>
+    In my time at Ultimate, I've taken leadership training, become a certified
+    Google Cloud Architect, participated in a few hackathons, and attended
+    HashiConf. I'd like to continue advancing my career in Site Reliability
+    Engineering but am open to other career fields in my interests.
   </p>
 </div>
 
 <div class="margin-left-large margin-right-large">
-  <h2>Interests</h2>
+  <h2 class="margin-top-none margin-bottom-none">Interests</h2>
 
   <div class="row flex-spaces">
     {% assign topics = site.data.about.techromancy.topics | sort: "name" %}
     {% for topic in topics %}
-      <div class="col md-col-6 sm-col-12">
-        <h3>{{ topic.name }}</h3>
+      <div class="col md-col-6 sm-col-12 padding-none">
+        <h3 class="margin-top-none margin-bottom-none">{{ topic.name }}</h3>
 
         <div class="row flex-spaces">
           <div class="col">
-            <p>Amount of Interest</p>
+            <p class="margin-top-none margin-bottom-none">Amount of Interest</p>
             {% assign percent = topic.interest | divided_by: 5.0 | times: 100 | round %}
             <div class="progress margin-bottom">
-              <div class="bar w-{{ percent }}"></div>
+              <div class="bar secondary w-{{ percent }}"></div>
             </div>
           </div>
 
           <div class="col">
-            <p>Amount of Experience</p>
+            <p class="margin-top-none margin-bottom-none">Amount of Experience</p>
             {% assign percent = topic.competence | divided_by: 5.0 | times: 100 | round %}
             <div class="progress margin-bottom">
               <div class="bar w-{{ percent }}"></div>
@@ -50,7 +85,7 @@
 </div>
 
 <div class="margin-left-large margin-right-large">
-  <h2>Technologies</h2>
+  <h2 class="margin-top-none margin-bottom-none">Technologies</h2>
 
   <div class="row">
     {% assign groups = site.data.about.techromancy.technologies | sort: "name" %}
