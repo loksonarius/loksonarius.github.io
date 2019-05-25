@@ -1,0 +1,143 @@
+---
+techromancy:
+  topics:
+    - name: Distributed Systems
+      interest: 3
+      competence: 3
+    - name: Game Engine Design
+      interest: 4
+      competence: 2
+    - name: Data Science
+      interest: 4
+      competence: 1
+    - name: Site Reliability Engineering
+      interest: 3
+      competence: 3
+    - name: Cyber Security
+      interest: 3
+      competence: 1
+    - name: Web Dev
+      interest: 2
+      competence: 2
+    - name: Developer Tooling
+      interest: 4
+      competence: 3
+    - name: Process Automation
+      interest: 2
+      competence: 4
+  technologies:
+    - name: operating systems
+      techs:
+        - name: Ubuntu Linux
+          experience: 7
+        - name: OpenSuse Linux
+          experience: 3
+        - name: Windows 7
+          experience: 6
+        - name: Windows 10
+          experience: 2
+        - name: Windows Server 2016
+          experience: 1
+        - name: OSX
+          experience: 3
+    - name: platforms
+      techs:
+        - name: GitHub Pages
+          experience: 1
+        - name: Pivotal Cloud Foundry
+          experience: 2
+        - name: Kubernetes
+          experience: 1
+    - name: languages
+      techs:
+        - name: Java
+          experience: 3
+        - name: Ruby
+          experience: 3
+        - name: Python
+          experience: 2
+        - name: Golang
+          experience: 1
+        - name: Rust
+          experience: 1
+        - name: C/C++
+          experience: 2
+    - name: operations
+      techs:
+        - name: Chef
+          experience: 2
+        - name: Ansible
+          experience: 2
+        - name: Concourse
+          experience: 2
+        - name: TeamCity
+          experience: 1
+        - name: Gitlab CI
+          experience: 1
+    - name: observability
+      techs:
+        - name: Grafana
+          experience: 2
+        - name: Sensu
+          experience: 2
+        - name: InfluxDB
+          experience: 1
+    - name: services
+      techs:
+        - name: SQLite
+          experience: 2
+        - name: PostgreSQL
+          experience: 1
+        - name: RabbitMQ
+          experience: 1
+
+splatoon:
+  bio:
+    ign: Sonarius
+    age: 21
+    level: 17s
+    region: US East
+    playtime: 720 hours
+    playstyle: Backliner & Flex
+  experience:
+    callouts: Yes
+    teams:
+      - Here's Woomy
+      - 20PewPew
+      - Prawn Stars
+      - Kensa Pavillion
+  solo_rankings:
+    splat_zones: 2131
+    tower_control: 2244
+    rainmaker: 2125
+    clam_blitz: 2267
+  availability:
+    sunday:
+      start: 1500
+      end: 2200
+    monday:
+      start: 2000
+      end: 2200
+    tuesday:
+      start: 1930
+      end: 2200
+    wednesday:
+      start: 2000
+      end: 2200
+    thursday:
+      start: 1930
+      end: 2200
+    friday:
+      start: 1900
+      end: 2200
+    saturday:
+      start: 1500
+      end: 2200
+  weapon_proficiences:
+    brellas: 20
+    chargers: 60
+    dualies: 10
+    rollers: 10
+    shooters: 30
+    sloshers: 15
+    splatlings: 60
