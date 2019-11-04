@@ -9,7 +9,7 @@ If you're pulling this repo down as refernce or want to mess around with it
 locally, you can follow this workflow to test changes after cloning the repo:
 
 ```bash
-> bundle install --path gems # install project dependencies
+> bundle install --path vendor/bundle # install project dependencies
 > bundle exec jekyll serve # generate live preview of pages
 > vscode . # or vim . or etc, etc, etc -- make changes
 ```

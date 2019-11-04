@@ -3,7 +3,7 @@ timezone: America/New_York
 theme: jekyll-theme-tactile
 
 exclude:
-  - gems
+  - vendor
 
 plugins:
   - jemoji
