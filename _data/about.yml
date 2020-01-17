@@ -39,13 +39,15 @@ techromancy:
         - name: Windows Server 2016
           experience: 1
         - name: OSX
-          experience: 3
+          experience: 4
     - name: platforms
       techs:
         - name: GitHub Pages
           experience: 1
         - name: Pivotal Cloud Foundry
           experience: 2
+        - name: Google Cloud Platform
+          experience: 1
         - name: Kubernetes
           experience: 1
     - name: languages
@@ -57,7 +59,7 @@ techromancy:
         - name: Python
           experience: 2
         - name: Golang
-          experience: 1
+          experience: 2
         - name: Rust
           experience: 1
         - name: C/C++
@@ -73,7 +75,7 @@ techromancy:
         - name: TeamCity
           experience: 1
         - name: Gitlab CI
-          experience: 1
+          experience: 2
     - name: observability
       techs:
         - name: Grafana
@@ -90,6 +92,8 @@ techromancy:
           experience: 1
         - name: RabbitMQ
           experience: 1
+        - name: Vault
+          experience: 2
 
 splatoon:
   ign: Sonarius
