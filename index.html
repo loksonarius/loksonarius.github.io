@@ -3,6 +3,7 @@ layout: home
 title: Home
 ---
 {% capture github_uri %}https://github.com/{{ site.data.contact.github }}{% endcapture %}
+{% capture linkedin_uri %}https://www.linkedin.com/in/{{ site.data.contact.linkedin }}{% endcapture %}
 {% capture twitter_uri %}https://twitter.com/{{ site.data.contact.twitter }}{% endcapture %}
 {% capture twitch_uri %}https://twitch.tv/{{ site.data.contact.twitch }}{% endcapture %}
 <div class="row flex-right margin-top-small">
@@ -24,6 +25,7 @@ title: Home
 
 <div class="row flex-spaces">
   <a href="{{ github_uri }}" title="GitHub" class="paper-btn">GitHub</a>
+  <a href="{{ linkedin_uri }}" title="LinkedIn" class="paper-btn">LinkedIn</a>
   <a href="{{ twitter_uri }}" title="Twitter" class="paper-btn">Twitter</a>
   <a href="{{ twitch_uri }}" title="Twitch" class="paper-btn">Twitch</a>
 </div>
