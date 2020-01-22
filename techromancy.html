@@ -68,6 +68,7 @@ display_title: Tech
         <h3 class="margin-top-none margin-bottom-none">{{ topic.name }}</h3>
 
         <div class="row flex-spaces">
+
           <div class="col">
             <p class="margin-top-none margin-bottom-none">Amount of Interest</p>
             {% assign percent = topic.interest | divided_by: 5.0 | times: 100 | round %}
@@ -83,6 +84,7 @@ display_title: Tech
               <div class="bar w-{{ percent }}"></div>
             </div>
           </div>
+
         </div>
       </div>
     {% endfor %}
@@ -95,19 +97,16 @@ display_title: Tech
   <div class="row">
     {% assign groups = site.data.about.techromancy.technologies | sort: "name" %}
     {% for group in groups %}
-      <div class="collapsible col col-12">
-        {% assign slug = group.name | downcase | replace: " ", "_" %}
-        <input id="collapsible_{{ slug }}" type="checkbox" name="collapsible">
-        <label for="collapsible_{{ slug }}" class="title">{{ group.name }}</label>
-        <div class="collapsible-body">
-          <table class="table-hover">
-            <thead>
-              <tr>
-                <th>Technology</th>
-                <th>Years of Experience</th>
-              </tr>
-            </thead>
-            <tbody>
+      <div class="col col-6">
+        <h3>{{ group.name }}</h3>
+        <table class="table-alternating col col-12">
+
+          <thead>
+            <th>Technology</th>
+            <th>Years of Experience</th>
+          </thead>
+
+          <tbody>
             {% assign techs = group.techs | sort: "experience" | reverse %}
             {% for tech in techs %}
               <tr>
@@ -115,10 +114,11 @@ display_title: Tech
                 <td>{{ tech.experience }}</td>
               </tr>
             {% endfor %}
-            </tbody>
-          </table>
-        </div>
+          </tbody>
+
+        </table>
       </div>
     {% endfor %}
   </div>
+
 </div>
