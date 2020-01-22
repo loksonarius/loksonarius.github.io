@@ -2,9 +2,10 @@ function next_salutation(elem) {
   salutations = [
     "Howdy!",
     "Howzit!",
-    "Hayyy!",
+    "Heyooo!",
     "Hallo!"
   ]
+
   // Returns salutation after elem if it exists, otherwise this just
   // returns the first salutation in the list
   idx = (salutations.indexOf(elem) + 1) % salutations.length;
