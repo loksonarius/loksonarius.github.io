@@ -4,8 +4,9 @@ title: Home
 ---
 {% capture github_uri %}https://github.com/{{ site.data.contact.github }}{% endcapture %}
 {% capture linkedin_uri %}https://www.linkedin.com/in/{{ site.data.contact.linkedin }}{% endcapture %}
-{% capture twitter_uri %}https://twitter.com/{{ site.data.contact.twitter }}{% endcapture %}
+{% capture sendouink_uri %}https://sendou.ink/u/{{ site.data.contact.sendouink }}{% endcapture %}
 {% capture twitch_uri %}https://twitch.tv/{{ site.data.contact.twitch }}{% endcapture %}
+{% capture twitter_uri %}https://twitter.com/{{ site.data.contact.twitter }}{% endcapture %}
 <div class="row flex-right margin-top-small">
     <h1 class="salute padding-right-large text-muted
       margin-top-none margin-bottom-none">
@@ -24,13 +25,14 @@ title: Home
 </div>
 
 <div class="row flex-spaces">
+  <a href="about" title="About Me" class="paper-btn">About Me</a>
+  <a href="blog" title="Blog" class="paper-btn">Blog</a>
   <a href="{{ github_uri }}" title="GitHub" class="paper-btn">GitHub</a>
   <a href="{{ linkedin_uri }}" title="LinkedIn" class="paper-btn">LinkedIn</a>
-  <a href="{{ twitter_uri }}" title="Twitter" class="paper-btn">Twitter</a>
-  <a href="{{ twitch_uri }}" title="Twitch" class="paper-btn">Twitch</a>
 </div>
 
 <div class="row flex-spaces">
-  <a href="about" title="About Me" class="paper-btn">About Me</a>
-  <a href="blog" title="Blog" class="paper-btn">Blog</a>
+  <a href="{{ twitter_uri }}" title="Twitter" class="paper-btn">Twitter</a>
+  <a href="{{ twitch_uri }}" title="Twitch" class="paper-btn">Twitch</a>
+  <a href="{{ sendouink_uri }}" title="sendou.ink" class="paper-btn">sendou.ink</a>
 </div>
