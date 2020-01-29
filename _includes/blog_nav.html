@@ -1,6 +1,6 @@
 {% capture twitter_base %}https://twitter.com/intent/tweet{% endcapture %}
-{% capture url_arg %}url={{ page.url }}{% endcapture %}
-{% capture tweet_text %}Just read a post by @LokSonarius{% endcapture %}
+{% capture url_arg %}url={{ site.url }}{{ page.url | post_url }}{% endcapture %}
+{% capture tweet_text %}Just read '{{ page.title }}' by @LokSonarius{% endcapture %}
 {% capture text_arg%}text={{ tweet_text | url_encode}}{% endcapture %}
 {% capture tweet_url %}{{ twitter_base }}?{{ url_arg }}&{{ text_arg }}{% endcapture %}
 <div class="row flex-center">

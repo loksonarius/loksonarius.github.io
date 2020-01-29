@@ -1,6 +1,7 @@
 author: dan
 timezone: America/New_York
 theme: jekyll-theme-tactile
+host: me.shew.io
 
 exclude:
   - vendor
