@@ -1,12 +1,20 @@
+{% capture twitter_base %}https://twitter.com/intent/tweet{% endcapture %}
+{% capture url_arg %}url={{ page.url }}{% endcapture %}
+{% capture tweet_text %}Just read a post by @LokSonarius{% endcapture %}
+{% capture text_arg%}text={{ tweet_text | url_encode}}{% endcapture %}
+{% capture tweet_url %}{{ twitter_base }}?{{ url_arg }}&{{ text_arg }}{% endcapture %}
 <div class="row flex-center">
+  <a href="{{ tweet_url }}" title="Tweet Post" class="paper-btn btn-small margin-small">
+    Tweet this! :bird:
+  </a>
   <a href="/blog" title="Blog Posts" class="paper-btn btn-small margin-small">
-    :postbox:
+    More posts! :postbox:
   </a>
   <button
     onclick="document.body.scrollTop = 0;
      document.documentElement.scrollTop = 0;"
     title="Top of Page"
     class="paper-btn btn-small margin-small">
-    :arrow_up:
+    To the top! :arrow_up:
   </button>
 </div>
