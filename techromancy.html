@@ -3,7 +3,7 @@ layout: default
 title: Techromancy
 display_title: Tech
 ---
-<div class="margin-left-large margin-right-large">
+<div class="row flex-center margin-left-large margin-right-large">
   <h2 class="margin-top-none margin-bottom-none">Education</h2>
 
   <p>
@@ -32,7 +32,7 @@ display_title: Tech
   </p>
 </div>
 
-<div class="margin-left-large margin-right-large">
+<div class="row flex-center margin-left-large margin-right-large">
   <h2 class="margin-top-none margin-bottom-none">Career</h2>
 
   <p>
@@ -58,7 +58,7 @@ display_title: Tech
   </p>
 </div>
 
-<div class="margin-left-large margin-right-large">
+<div class="row flex-center margin-left-large margin-right-large">
   <h2 class="margin-top-none margin-bottom-none">Interests</h2>
 
   <div class="row flex-spaces">
@@ -91,14 +91,14 @@ display_title: Tech
   </div>
 </div>
 
-<div class="margin-left-large margin-right-large">
+<div class="row flex-center margin-left-large margin-right-large">
   <h2 class="margin-top-none margin-bottom-none">Technologies</h2>
 
-  <div class="row">
+  <div class="row flex-spaces">
     {% assign groups = site.data.about.techromancy.technologies | sort: "name" %}
     {% for group in groups %}
-      <div class="col col-6">
-        <h3>{{ group.name }}</h3>
+      <div class="col sm-col-12 md-col-6 lg-col-6">
+        <h3 class="margin-top-none margin-bottom-none">{{ group.name }}</h3>
         <table class="table-alternating col col-12">
 
           <thead>
