@@ -2,11 +2,6 @@
 layout: home
 title: Home
 ---
-{% capture github_uri %}https://github.com/{{ site.data.contact.github }}{% endcapture %}
-{% capture linkedin_uri %}https://www.linkedin.com/in/{{ site.data.contact.linkedin }}{% endcapture %}
-{% capture sendouink_uri %}https://sendou.ink/u/{{ site.data.contact.sendouink }}{% endcapture %}
-{% capture twitch_uri %}https://twitch.tv/{{ site.data.contact.twitch }}{% endcapture %}
-{% capture twitter_uri %}https://twitter.com/{{ site.data.contact.twitter }}{% endcapture %}
 <div class="row flex-right margin-top-small">
     <h1 class="salute padding-right-large text-muted
       margin-top-none margin-bottom-none">
@@ -18,21 +13,28 @@ title: Home
     </h1>
 </div>
 
-<div class="row flex-left">
-  <p class="padding-left-large text-muted">
-    This is my page, and those are my links:
+<div class="row flex-right">
+  <p class="padding-left-small padding-right-large text-muted">
+    and this is my site! Here you can:
   </p>
 </div>
 
 <div class="row flex-spaces">
-  <a href="about" title="About Me" class="paper-btn">About Me</a>
-  <a href="blog" title="Blog" class="paper-btn">Blog</a>
-  <a href="{{ github_uri }}" title="GitHub" class="paper-btn">GitHub</a>
-  <a href="{{ linkedin_uri }}" title="LinkedIn" class="paper-btn">LinkedIn</a>
+  <a href="about" title="Learn About Me" class="paper-btn">Learn About Me</a>
+  <a href="blog" title="Read My Blog" class="paper-btn">Read My Blog</a>
+  <a href="contact" title="Contact Me" class="paper-btn">Contact Me</a>
+</div>
+
+<div class="row flex-left">
+  <p class="padding-left-large padding-right-small text-muted">
+    <small>You can find me on these sites too:</small>
+  </p>
 </div>
 
 <div class="row flex-spaces">
-  <a href="{{ twitter_uri }}" title="Twitter" class="paper-btn">Twitter</a>
-  <a href="{{ twitch_uri }}" title="Twitch" class="paper-btn">Twitch</a>
-  <a href="{{ sendouink_uri }}" title="sendou.ink" class="paper-btn">sendou.ink</a>
+  <a class="paper-btn padding-small" href="{{ site.data.contact.github_uri }}" title="GitHub">GitHub</a>
+  <a class="paper-btn padding-small" href="{{ site.data.contact.linkedin_uri }}" title="LinkedIn">LinkedIn</a>
+  <a class="paper-btn padding-small" href="{{ site.data.contact.twitter_uri }}" title="Twitter">Twitter</a>
+  <a class="paper-btn padding-small" href="{{ site.data.contact.twitch_uri }}" title="Twitch">Twitch</a>
+  <a class="paper-btn padding-small" href="{{ site.data.contact.sendouink_uri }}" title="sendou.ink">sendou.ink</a>
 </div>

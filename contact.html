@@ -1,0 +1,48 @@
+---
+layout: default
+title: Contact Me
+display_title: Contact Me
+---
+{% assign background_arg='background_color=fffcf4' %}
+{% assign primary_arg='primary_color=868e96' %}
+{% assign text_arg='text_color=41403e' %}
+{% assign details_arg='hide_landing_page_details=0' %}
+{% assign base_url='https://calendly.com/sonarius' %}
+{% capture query %}
+{{ details_arg }}&{{ background_arg }}&{{ primary_arg }}&{{ text_arg }}
+{% endcapture %}
+{% capture calendar_url %}
+{{ base_url }}?{{ query }}
+{% endcapture %}
+<div class="row flex-center">
+
+  <div class="col">
+    <p>Feel free to reach out on any of the following mediums:</p>
+    <ul>
+      <li><a href="mailto:{{ site.data.contact.email }}">:envelope: danh@shew.io</a></li>
+      <li><a href="{{ site.data.contact.linkedin_uri }}">:bust_in_silhouette: LinkedIn</a></li>
+      <li><a href="{{ site.data.contact.twitter_uri }}">:bird: @LokSonarius</a></li>
+    </ul>
+    <p>
+      Alternatively, use the available widget on this page to schedule a
+      meeting time to chat!
+    </p>
+  </div>
+
+  <div class="col col-2">
+  </div>
+
+  <div class="col card">
+    <div class="card-body">
+      <h4 class="card-title">Schedule a Meeting</h4>
+    </div>
+    <div class="card-body calendly-inline-widget"
+      style="width: 25rem; min-width: 320px; height: 630px"
+      data-url="{{ calendar_url }}">
+    </div>
+    <script type="text/javascript"
+      src="https://assets.calendly.com/assets/external/widget.js">
+    </script>
+  </div>
+
+</div>
