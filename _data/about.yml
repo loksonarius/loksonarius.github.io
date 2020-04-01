@@ -8,10 +8,10 @@ techromancy:
       interest: 4
       competence: 2
     - name: Data Science
-      interest: 4
+      interest: 3
       competence: 1
     - name: Site Reliability Engineering
-      interest: 3
+      interest: 4
       competence: 3
     - name: Cyber Security
       interest: 3
@@ -23,7 +23,7 @@ techromancy:
       interest: 4
       competence: 3
     - name: Process Automation
-      interest: 2
+      interest: 3
       competence: 4
   technologies:
     - name: operating systems
@@ -43,7 +43,7 @@ techromancy:
     - name: platforms
       techs:
         - name: GitHub Pages
-          experience: 1
+          experience: 2
         - name: Pivotal Cloud Foundry
           experience: 2
         - name: Google Cloud Platform
