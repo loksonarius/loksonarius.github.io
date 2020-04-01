@@ -1,0 +1,77 @@
+---
+layout: default
+title: Availability
+display_title: Weekly Availability
+---
+<script type="text/javascript">
+  dayjs.extend(window.dayjs_plugin_isBetween)
+  dayjs.extend(window.dayjs_plugin_weekday)
+</script>
+<script type="text/javascript" src="/assets/js/ical.min.js">
+</script>
+<script type="text/javascript" src="/assets/js/calendar.js">
+</script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", (event) => {render_cal();})
+</script>
+
+{% assign weekdays = "wd0,wd1,wd2,wd3,wd4" | split: "," %}
+{% capture ids_text %}
+  {% for hour in (9..17) %}
+    ,{{hour}}{% cycle "00", "30" %}
+    ,{{hour}}{% cycle "00", "30" %}
+  {% endfor %}
+{% endcapture %}
+{% capture times %}
+  {% for hour in (9..17) %}
+    {% if hour < 12 %}
+      ,{{hour}}:{% cycle "00", "30" %}<sub>AM</sub>
+      ,{{hour}}:{% cycle "00", "30" %}<sub>AM</sub>
+    {% elsif hour == 12 %}
+      ,{{hour}}:{% cycle "00", "30" %}<sub>PM</sub>
+      ,{{hour}}:{% cycle "00", "30" %}<sub>PM</sub>
+    {% else %}
+      ,{{hour | modulo: 12 }}:{% cycle "00", "30" %}<sub>PM</sub>
+      ,{{hour | modulo: 12 }}:{% cycle "00", "30" %}<sub>PM</sub>
+    {% endif %}
+  {% endfor %}
+{% endcapture %}
+{% assign ids = ids_text | remove_first: "," | split: "," %}
+{% assign timeslots = times | remove_first: "," | split: "," %}
+<div>
+  <p id="loading">Loading availability for next 5 work days...</p>
+</div>
+
+<div>
+  <p id="error" hidden>Unable to fetch availability!</p>
+</div>
+
+<div class="row flex-center">
+  <table id="calendar" hidden>
+    <thead>
+      <tr>
+        {% for day in weekdays %}
+          <th>{{ day | upcase }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+    {% assign end = timeslots | size | minus: 1 %}
+    {% for slot in timeslots limit:end %}
+      <tr>
+      {% assign slot_id = ids[forloop.index0] %}
+      {% assign end_time_idx = forloop.index %}
+      {% for day in weekdays %}
+        {% capture id %}
+          {{ slot_id | strip }}-{{ day }}
+        {% endcapture %}
+        <td id="{{id}}" class="text-muted background-success">
+          {{ slot }} -
+          {{ timeslots[end_time_idx] }}
+        </td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+</div>
