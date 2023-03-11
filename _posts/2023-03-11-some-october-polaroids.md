@@ -23,23 +23,23 @@ scans:
 Late last year, I deep-dove into instant photography. The original idea in my
 head was to start blogging and journaling various projects I'd be working on at
 a time. The aesthetic of journaling and scrapbooking projects like garage
-experiments really settled nicely in my head.
+experiments really settled nicely in my head. After all of that, I ended up
+buying a Polaroid Now+ and very quickly came face-to-face with the hardships of
+taking good, clear photos of awkward subjects without any studio setup.
 
-After all of that, I ended up buying a Polaroid Now+. I very quickly came
-face-to-face with the hardships of taking good, clear photos of awkward subjects
-without any studio setup. Between that and the relative fragility of actual
-Polaroid film, the blogging idea went straight into the garbage.
+Between realizing how challenging photography can be and the relative fragility
+of actual Polaroid film itself, the blogging idea went straight into the garbage.
+Regardless of that small failure, I started appreciating photography more now
+that I was getting hands-on experience, trying to take shots with just the
+assistance of an EV reading. And after a few photos here and there, I ended up
+adopting instant photography as a minor hobby. And without the stress of trying
+to take "good" photos, I'm kinda just free to see whatever the camera spits out
+into my hand. :grin:
 
-Regardless of the looming buyer's remorse, I started appreciating photography a
-lot now that I was getting hands-on experience trying to take shots without only
-the assistance of an EV reading. After a few photos here and there, I just
-straight up adopted instant photography as a minor hobby. And without the stress
-of trying to take "good" photos, I'm kinda just free to see whatever the camera
-spits out into my hand. :grin:
-
-All this setup to denote the start of something I'd like to do occasionally
-where I select some photos I took, group in a blog post, and maybe talk about
-why I care about em. For the first batch: spook hour.
+I share all that as setup for the start of something I'll be committing to for a
+bit where I select some photos I took, group them in a blog post, and talk about
+the context around them or just some technical details I was focusing on when
+taking them. For the first batch: spook hour.
 
 In this batch, we have shots of gag decorations we bought for an upcoming
 Halloween party. My favorite is definitely the double-exposure shot of the
