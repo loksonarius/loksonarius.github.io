@@ -5,13 +5,18 @@ _personal site for my links, blog posts, and resume_
 Please just visit the site itself to understand what the project is about!
 :heart:
 
-If you're pulling this repo down as refernce or want to mess around with it
-locally, you can follow this workflow to test changes after cloning the repo:
+If you're pulling this repo down as reference or want to mess around with it
+locally, I recommend this workflow to test changes after cloning the repo:
 
 ```bash
-> bundle install --path vendor/bundle # install project dependencies
-> bundle exec jekyll serve # generate live preview of pages
-> vscode . # or vim . or etc, etc, etc -- make changes
+# Setup Gem dependencies
+> bundle
+
+# Serve website locally
+> bundle exec jekyll serve -H localhost
+
+# Make changes that get auto-published
+> vscode . # or vim . or etc, etc, etc
 ```
 
 ## Feedback
