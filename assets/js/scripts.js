@@ -1,9 +1,9 @@
 function next_salutation(elem) {
   salutations = [
-    "Howdy!",
-    "Howzit!",
-    "Heyooo!",
-    "Hallo!"
+    "howdy,",
+    "howzit,",
+    "heyooo,",
+    "hallo,"
   ]
 
   // Returns salutation after elem if it exists, otherwise this just

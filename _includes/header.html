@@ -1,18 +1,15 @@
-<div class="row flex-left margin-top-small">
-  {% capture title %}
-    {% if page.display_title %}
-      {{ page.display_title }}
-    {% else %}
-      {{ page.title }}
-    {% endif %}
-  {% endcapture %}
-  <h1 class="padding-left padding-right text-muted
-    margin-top-none margin-bottom-none">
-    {{ title | replace: "Dan", '<strong class="text-primary">Dan</strong>' }}
-  </h1>
-</div>
-<div class="row flex-spaces">
-  <a href="/" title="Home" class="paper-btn btn-small align-top">
-    :house:
-  </a>
+<div class="row flex-middle flex-edges margin-top-small">
+  <div class="col-fill col">
+    {% capture title %}
+      {% if page.display_title %}
+        {{ page.display_title }}
+      {% else %}
+        {{ page.title }}
+      {% endif %}
+    {% endcapture %}
+    <h2 class="padding-left padding-right text-muted
+      margin-top-none margin-bottom-none">
+      {{ title | replace: "Dan", '<strong class="text-primary">Dan</strong>' }}
+    </h2>
+  </div>
 </div>

@@ -1,46 +1,27 @@
 ---
 layout: default
-title: Contact Me
-display_title: Contact Me
+title: contact
+display_title: contact
 ---
-{% assign background_arg='background_color=fffcf4' %}
-{% assign primary_arg='primary_color=868e96' %}
-{% assign text_arg='text_color=41403e' %}
-{% assign details_arg='hide_landing_page_details=0' %}
-{% assign base_url='https://calendly.com/sonarius' %}
-{% capture query %}
-{{ details_arg }}&{{ background_arg }}&{{ primary_arg }}&{{ text_arg }}
-{% endcapture %}
-{% capture calendar_url %}
-{{ base_url }}?{{ query }}
-{% endcapture %}
-<div class="row flex-center">
-
-  <div class="col">
-    <p>Feel free to reach out on any of the following mediums:</p>
-    <ul>
-      <li><a href="mailto:{{ site.data.contact.email }}">:envelope: danh@shew.io</a></li>
-      <li><a href="{{ site.data.contact.linkedin_uri }}">:bust_in_silhouette: LinkedIn</a></li>
-      <li><a href="{{ site.data.contact.twitter_uri }}">:bird: @LokSonarius</a></li>
-    </ul>
+<div class="flex-middle flex-center margin-left-large margin-right-large">
     <p>
-      Alternatively, use the available widget on this page to schedule a
-      meeting time to chat!
+      Feel free to reach out on any of the following mediums:
+      <br/>
+      <ul>
+        <li>
+          <a href="mailto:{{ site.data.contact.email }}">
+            e-mail :envelope: danh@shew.io
+          </a>
+        </li>
+        {% for other_site in site.data.contact.other_sites %}
+        {% if other_site.contact_me %}
+        <li>
+          <a href="{{ other_site.uri }}">
+            {{ other_site.name }} {{ other_site.emoji}} {{ other_site.user }}
+          </a>
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
     </p>
-  </div>
-
-  <div class="col col-2">
-  </div>
-
-  <div class="col">
-    <h4 >Schedule a Meeting</h4>
-    <div class="calendly-inline-widget"
-      style="min-width: 320px; height: 630px"
-      data-url="{{ calendar_url }}">
-    </div>
-    <script type="text/javascript"
-      src="https://assets.calendly.com/assets/external/widget.js">
-    </script>
-  </div>
-
 </div>

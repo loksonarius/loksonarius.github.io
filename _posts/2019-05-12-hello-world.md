@@ -1,7 +1,9 @@
 ---
 layout: post
 published: true
-tags: [misc, tech]
+tags:
+  - misc
+  - tech
 ---
 
 After writing this site for ages, I've finally plopped down and hashed it out

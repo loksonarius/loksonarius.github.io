@@ -2,10 +2,9 @@
 layout: base
 ---
 {% include header.html %}
-<hr/>
-<div class="row flex-center padding-bottom-none">
-  <article class="article col col-9">
-    <p class="article-meta text-muted margin-bottom-none">
+<div class="row flex-center padding-bottom-none padding-top-none">
+  <article class="article col col-9 padding-top-none padding-bottom-none">
+    <p class="article-meta text-muted padding-bottom-none">
       Published {{ page.date | date_to_string }} ||
       Written by <a href="/about" class="text-primary">Dan</a>
     </p>
@@ -20,7 +19,7 @@ layout: base
       {% capture src %}{{ site.data.spaces.url }}/{{ scan_path | cgi_encode }}{% endcapture %}
       {% capture modal_name %}scanmodal-{{ forloop.index }}{% endcapture %}
 
-      <label class="sm-8 md-6 lg-3 col" for="{{ modal_name }}">
+      <label class="sm-8 md-6 lg-4 col" for="{{ modal_name }}">
       <img src="{{ src }}"
            style="cursor:pointer"
            alt="{{ scan.description }}"/>

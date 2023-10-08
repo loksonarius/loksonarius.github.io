@@ -1,13 +1,34 @@
 ---
 email: danh@shew.io
 gravatar: '98cb4b556df062e8635f0cc53e43dc7f'
-github: loksonarius
-github_uri: https://github.com/loksonarius
-linkedin: sonarius
-linkedin_uri: https://www.linkedin.com/in/sonarius
-sendouink: sonarius
-sendouink_uri: https://sendou.ink/u/sonarius
-twitch: loktopicsonarius
-twitch_uri: https://twitch.tv/loktopicsonarius
-twitter: LokSonarius
-twitter_uri: https://twitter.com/LokSonarius
+other_sites:
+  - name: github
+    user: loksonarius
+    uri: https://github.com/loksonarius
+    emoji: ':octocat:'
+  - name: linkedin
+    user: sonarius
+    uri: https://www.linkedin.com/in/sonarius
+    contact_me: true
+    emoji: ':bust_in_silhouette:'
+  - name: sendouink
+    user: sonarius
+    uri: https://sendou.ink/u/sonarius
+    emoji: ':squid:'
+  - name: twitch
+    user: loktopicsonarius
+    uri: https://twitch.tv/loktopicsonarius
+    emoji: ':tv:'
+  - name: twitter
+    user: '@LokSonarius'
+    uri: https://twitter.com/LokSonarius
+    emoji: ':bird:'
+  - name: vrchat
+    user: Sonarius
+    uri: https://vrchat.com/home/user/usr_811969e0-ec3b-460a-b616-2f98925d0d6c
+    emoji: ':globe_with_meridians:'
+  - name: mastodon
+    user: '@sonarius@sunny.garden'
+    uri: https://sunny.garden/@sonarius
+    contact_me: true
+    emoji: ':elephant:'

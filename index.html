@@ -5,7 +5,7 @@ title: Home
 <div class="row flex-right margin-top-small">
     <h1 class="salute padding-right-large text-muted
       margin-top-none margin-bottom-none">
-      Howdy!
+      howdy,
     </h1>
     <h1 class="padding-right-large text-muted
       margin-top-none margin-bottom-none">
@@ -20,9 +20,9 @@ title: Home
 </div>
 
 <div class="row flex-spaces">
-  <a href="about" title="Learn About Me" class="paper-btn">Learn About Me</a>
-  <a href="blog" title="Read My Blog" class="paper-btn">Read My Blog</a>
-  <a href="contact" title="Contact Me" class="paper-btn">Contact Me</a>
+  <a href="about" title="about" class="paper-btn">about</a>
+  <a href="blog" title="posts" class="paper-btn">posts</a>
+  <a href="contact" title="contact" class="paper-btn">contact</a>
 </div>
 
 <div class="row flex-left">
@@ -32,9 +32,10 @@ title: Home
 </div>
 
 <div class="row flex-spaces">
-  <a class="paper-btn padding-small" href="{{ site.data.contact.github_uri }}" title="GitHub">GitHub</a>
-  <a class="paper-btn padding-small" href="{{ site.data.contact.linkedin_uri }}" title="LinkedIn">LinkedIn</a>
-  <a class="paper-btn padding-small" href="{{ site.data.contact.twitter_uri }}" title="Twitter">Twitter</a>
-  <a class="paper-btn padding-small" href="{{ site.data.contact.twitch_uri }}" title="Twitch">Twitch</a>
-  <a class="paper-btn padding-small" href="{{ site.data.contact.sendouink_uri }}" title="sendou.ink">sendou.ink</a>
+  {% for other_site in site.data.contact.other_sites %}
+  <a class="paper-btn padding-small" rel="me"
+    href="{{ other_site.uri }}" title="{{ other_site.name }}">
+    {{ other_site.name }}
+  </a>
+  {% endfor %}
 </div>
