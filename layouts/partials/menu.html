@@ -1,0 +1,51 @@
+{{- $page := .page }}
+{{- $homepage := .site.Title }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <nav>
+    <ul>
+      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+    </ul>
+  </nav>
+  <hr/>
+{{- end }}
+
+{{- define "partials/inline/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
+    {{- $attrs := dict "href" .URL }}
+
+    {{- if or
+      ($page.IsMenuCurrent .Menu .)
+      ($page.HasMenuCurrent .Menu .)
+    }}
+      {{- $attrs = merge $attrs (dict "class" "current") }}
+    {{- end -}}
+
+    {{- with .Params.includes -}}
+      {{- if in . $page.Type -}}
+        {{- $attrs = merge $attrs (dict "class" "current") }}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+
+    <li>
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      >
+        <h1>[{{ $name }}]</h1>
+      </a>
+    </li>
+  {{- end }}
+{{- end }}

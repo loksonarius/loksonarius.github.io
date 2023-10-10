@@ -1,0 +1,74 @@
+{{ define "main" }}
+<!-- about me -->
+<div id="me" class="row about-section ">
+  <h3>me</h3>
+  <div class="eight columns">
+    <p>
+      Heya, I'm Dan and I have a few interests. I'm into tech, art, coffee, cooking,
+      fitness, language learning, and bunch of other things. If you see my pfp in
+      your space, it's probably me, but you can also be sure by checking my <a
+      href="#aka">[aka]</a> section.
+    </p>
+  </div>
+  <div class="three columns">
+    <img
+      class="u-max-full-width"
+      title="me irl"
+      src="{{ .Site.Data.Gravatar.uri }}"
+    />
+  </div>
+</div>
+
+<!-- alt identities -->
+<div id="aka" class="row aka-section">
+<h3>aka</h3>
+<p>
+  You might also see me around as some of the following:
+</p>
+<ul dir="rtl">
+  {{ range .Site.Data.Identities }}
+  <li>
+    <p>
+      <!-- user -->
+      as <em>{{ .user }}</em>
+      <!-- preposition -->
+      {{ if eq .name "email" }}by{{ else }}on{{ end }}
+      <!-- flavour -->
+      {{ if .emoji }}
+        {{ .emoji | emojify }}
+      {{ end }}
+      <!-- name+link -->
+      {{ if .uri }}
+      <a
+          {{ if eq .name "mastodon"}}rel="me"{{ end }}
+          href={{ .uri }}
+          title="{{ .name }}">
+        [{{ .name }}]
+      </a>
+      {{ else }}
+        {{ .name }}
+      {{ end }}
+    </p>
+  </li>
+  {{ end }}
+</ul>
+</div>
+
+<!-- pgp key -->
+<div id="pgp" class="row">
+  <h3>pgp key</h3>
+  <p>
+    hardly use it, but if I do, it'll match <a
+      href="/assets/keys/public.pgp.key">[this public key]</a>
+  </p>
+</div>
+
+<!-- work search -->
+<div id="resume" class="row">
+  <h3>hire me</h3>
+  <p>
+    maybe, at least check my <a href="/assets/pdf/resume.pdf">[resume]</a> first
+  </p>
+</div>
+
+{{ end }}

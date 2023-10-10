@@ -1,0 +1,10 @@
+{{- $image := .image -}}
+{{- $url := .url -}}
+
+{{- with $image -}}
+  <dialog class="image-modal" id="{{ .name | anchorize }}-modal">
+    <img src="{{ $url }}" title="{{ .name }}" alt="{{ .description }}"/>
+    <a class="modal-background" href="#!"></a>
+    <a class="close" href="#!">x</a>
+  </dialog>
+{{- end -}}

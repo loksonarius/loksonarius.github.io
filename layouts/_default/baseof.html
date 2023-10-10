@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/normalize.css"/>
+    <link rel="stylesheet" href="/assets/css/skeleton.css"/>
+
+    <link rel="stylesheet" href="/assets/css/custom.css"/>
+
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+    {{ end }}
+
+    <title>{{ block "title" . }}
+      {{ .Site.Title }}
+    {{ end }}</title>
+  </head>
+
+  <body>
+    <div class="container page-container">
+      <div class="row">
+        {{ partial "menu.html" (dict "menuID" "main" "page" . "site" .Site) }}
+      </div>
+      <div class="row">
+        <div class="one-half columns main-body">
+        {{ block "main" . }}
+        {{ end }}
+        </div>
+      </div>
+      {{ block "footer" . }}
+      <div class="row">
+        {{ partial "footer.html" . }}
+      </div>
+      {{ end }}
+    </div>
+  </body>
+
+</html>

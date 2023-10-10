@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="row post-header">
+  <h3 id="title">{{ .Title }}</h3>
+  <span class="post-date">{{ .Params.Date.Format "2006, Jan 02" }}</span>
+  <span class="post-meta-separator"> | </span>
+  <span class="post-tags">
+    {{- $siteTags := .Site.Taxonomies.tags -}}
+    {{ range .Params.tags }}
+      {{ $tagPages := index $siteTags . }}
+      <a href="{{ $tagPages.Page.Permalink }}" title="{{ . }}">#{{ . }}</a>
+    {{ end }}
+  </span>
+</div>
+
+<div class="row post-content">
+  <article>
+    {{ .Content | emojify }}
+  </article>
+
+  {{ $baseUrl := .Param "photosBaseUrl" }}
+  {{ with .Params.photos }}
+  <ul class="photo-list">
+    {{ range . }}
+      {{- $url := urls.JoinPath $baseUrl .name }}
+      <li>
+        <a href="#{{ .name | anchorize }}-modal">{{ .name }}</a>
+        <a class="external" href="{{ $url }}" target="_blank"/></a>
+        <p>{{ .details }}</p>
+      </li>
+    {{ end }}
+  </ul>
+  {{ range . }}
+      {{- $url := urls.JoinPath $baseUrl .name }}
+      {{ partial "image-modal.html" (dict "image" . "url" $url)}}
+  {{ end }}
+  {{ end }}
+</div>
+{{ end }}

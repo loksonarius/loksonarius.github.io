@@ -1,0 +1,18 @@
+baseURL: https://me.shew.io/
+title: me.shew.io
+description: just a personal site
+author: sonarius (dan)
+languageCode: en-us
+params:
+  photosBaseUrl: https://assets.me.shew.io/scans
+menu:
+  main:
+    - name: who
+      pageRef: /
+      weight: 1
+    - name: posts
+      pageRef: /posts
+      weight: 10
+      params:
+        includes:
+          - tags

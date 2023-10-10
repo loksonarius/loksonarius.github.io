@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<div class="row">
+
+  <!-- tag cloud -->
+  <div id="tags" class="four columns">
+    {{ with .OutputFormats.Get "rss" -}}
+      {{ printf `subscribe to this <a type=%q href=%q title=%q>[feed]</a>`
+          .MediaType.Type .Permalink site.Title | safeHTML }}
+    {{ end }}
+    <p>filter by tag</p>
+    <ul class="tag-cloud">
+    {{ $term := .Page.Data.Term }}
+    {{ range .Site.Taxonomies.tags }}
+      <li>
+        <a
+          {{ if eq .Page.Type "tags" }}
+            {{ if eq .Page.Title $term }}
+              class="current"
+              href="/posts"
+            {{ else }}
+              href="{{ .Page.Permalink }}"
+            {{ end }}
+          {{ else }}
+            href="{{ .Page.Permalink }}"
+          {{ end }}
+          title="{{ .Page.Title }} posts"
+          >
+          #{{ .Page.Title }}
+        </a>
+      </li>
+    {{- end }}
+    </ul>
+  </div>
+
+  <!-- posts -->
+  <div id="posts" class="eight columns">
+    <ul>
+
+    {{ range .Pages.ByPublishDate }}
+      <li>
+        <a class="post-link" href="{{ .Permalink }}" title="{{ .Title }}">"{{ .Title }}"</a>
+        <span class="post-date">{{ .Params.Date.Format "2006, Jan 02" }}</span>
+      </li>
+    {{ end }}
+
+    </ul>
+  </div>
+
+</div>
+{{ end }}
