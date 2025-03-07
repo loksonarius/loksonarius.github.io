@@ -1,25 +1,24 @@
----
-title: Some October Polaroids
-date: 2023-03-11
-draft: false
-tags:
-  - photography
-photos:
-  - name: 2023x1.jpeg
-    description: skeleton lying on cutting board
-    details: >
-      I think this was the very first photo I even took with the camera.
-      Absolutely fortunate to have bought this skeleton just days before.
-  - name: 2023x2.jpeg
-    description: double-exposure of skeleton
-    details: >
-      This was my first double-exposure attempt. Used a blanket to make the
-      backdrop on the couch.
-  - name: 2023x3.jpeg
-    description: fading chicken in the dark
-    details: >
-      This was my wife's first picture. Despite being still, it feels violent.
----
++++
+date = '2023-03-11'
+draft = false
+tags = ['photography']
+title = 'Some October Polaroids'
+
+[[photos]]
+  description = 'skeleton lying on cutting board'
+  details = "I think this was the very first photo I even took with the camera. Absolutely fortunate to have bought this skeleton just days before.\n"
+  name = '2023x1.jpeg'
+
+[[photos]]
+  description = 'double-exposure of skeleton'
+  details = "This was my first double-exposure attempt. Used a blanket to make the backdrop on the couch.\n"
+  name = '2023x2.jpeg'
+
+[[photos]]
+  description = 'fading chicken in the dark'
+  details = "This was my wife's first picture. Despite being still, it feels violent.\n"
+  name = '2023x3.jpeg'
++++
 Late last year, I deep-dove into instant photography. The original idea in my
 head was to start blogging and journaling various projects I'd be working on at
 a time. The aesthetic of journaling and scrapbooking projects like garage

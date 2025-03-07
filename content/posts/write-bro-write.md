@@ -1,7 +1,7 @@
 +++
-title = 'write, bro, write'
-date = 2025-03-06T21:33:21-05:00
+date = '2025-03-06T21:33:21-05:00'
 draft = false
+title = 'write, bro, write'
 +++
 
 I’m forcing myself from the time I’ve started writing this to not switch

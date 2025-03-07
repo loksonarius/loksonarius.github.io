@@ -1,11 +1,9 @@
----
-title: Hello World
-date: 2019-05-12
-draft: false
-tags:
-  - misc
-  - tech
----
++++
+date = '2019-05-12'
+draft = false
+tags = ['misc', 'tech']
+title = 'Hello World'
++++
 After writing this site for ages, I've finally plopped down and hashed it out
 in a few days, neglecting to do much of anything else in the process.
 
