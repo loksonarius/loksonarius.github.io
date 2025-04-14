@@ -1,6 +1,7 @@
 +++
 date = '2025-03-06T21:33:21-05:00'
 draft = false
+tags = ['personal']
 title = 'write, bro, write'
 +++
 
