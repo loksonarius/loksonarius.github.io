@@ -21,13 +21,12 @@
 
 <!-- alt identities -->
 <div id="aka" class="row aka-section">
-<h3>aka</h3>
-<p>
-  You might also see me around as some of the following:
-</p>
-<ul dir="rtl">
-  {{ range .Site.Data.Identities }}
-  <li>
+  <h3>aka</h3>
+  <p>
+    You might also see me around as some of the following:
+  </p>
+  <div dir="rtl">
+    {{ range .Site.Data.Identities }}
     <p>
       <!-- user -->
       as <em>{{ .user }}</em>
@@ -49,9 +48,8 @@
         {{ .name }}
       {{ end }}
     </p>
-  </li>
-  {{ end }}
-</ul>
+    {{ end }}
+  </div>
 </div>
 
 {{ end }}
