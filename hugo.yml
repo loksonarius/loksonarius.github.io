@@ -1,8 +1,9 @@
-baseURL: https://me.shew.io/
-title: me.shew.io
+baseURL: https://hato.me/
+title: hato.me
 description: just a personal site
 author: sonarius (dan)
 languageCode: en-us
+# TODO: switch to a lfs and content store model
 params:
   photosBaseUrl: https://assets.me.shew.io/scans
 menu:
