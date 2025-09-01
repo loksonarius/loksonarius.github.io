@@ -1,6 +1,67 @@
-<!doctype html><html><head><meta name=viewport content="width=device-width,initial-scale=1" charset=utf-8><link rel=icon type=image/x-icon href=/favicon.ico><link rel=stylesheet href=/assets/css/normalize.css><link rel=stylesheet href=/assets/css/skeleton.css><link rel=stylesheet href=/assets/css/custom.css><title>me.shew.io</title></head><body><div class="container page-container"><div class=row><nav><ul><li><a href=/><h1>[who]</h1></a></li><li><a href=/posts/><h1>[posts]</h1></a></li><li><a class=current href=/resume/><h1>[resume]</h1></a></li></ul></nav><hr></div><div class=row><div class="one-half columns main-body"><div class="row post-header"><h3 id=title>resume</h3><span class=post-date></span>
-<span class=post-meta-separator>|</span>
-<span class=post-tags></span></div><div class="row post-content"><article><h1 id=senior-software-engineer--lambda-sep-24---present>Senior Software Engineer @ Lambda (Sep &lsquo;24 - Present)</h1><h2 id=consolidate-usage-of-artifactory-behind-a-bespoke-self-service-interface>Consolidate usage of Artifactory behind a bespoke self-service interface</h2><p><em>Related Tech: Terraform, Artifactory, GitHub Actions</em></p><p>By extensively reviewing deployment code and conducting user surveys, I was able
+<!DOCTYPE html>
+<html>
+
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8"/>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+    <link rel="stylesheet" href="/assets/css/normalize.css"/>
+    <link rel="stylesheet" href="/assets/css/skeleton.css"/>
+
+    <link rel="stylesheet" href="/assets/css/custom.css"/>
+
+    
+
+    <title>
+      me.shew.io
+    </title>
+  </head>
+
+  <body>
+    <div class="container page-container">
+      <div class="row">
+        
+  <nav>
+    <ul>
+
+    <li>
+      <a href="/">
+        <h1>[who]</h1>
+      </a>
+    </li>
+
+    <li>
+      <a href="/posts/">
+        <h1>[posts]</h1>
+      </a>
+    </li>
+
+    <li>
+      <a class="current" href="/resume/">
+        <h1>[resume]</h1>
+      </a>
+    </li>
+    </ul>
+  </nav>
+  <hr/>
+
+      </div>
+      <div class="row">
+        <div class="one-half columns main-body">
+        
+
+<div id="resume-intro" class="row">
+  <p>
+    Short blurbs covering my career.
+    For the one pager, <a href="/assets/pdf/resume.pdf">see my rendered resume</a>.
+  </p>
+</div>
+
+<div id="resume" class="row">
+  <h1 id="senior-software-engineer--lambda-sep-24---present">Senior Software Engineer @ Lambda (Sep &lsquo;24 - Present)</h1>
+<h2 id="consolidate-usage-of-artifactory-behind-a-bespoke-self-service-interface">Consolidate usage of Artifactory behind a bespoke self-service interface</h2>
+<p><em>Related Tech: Terraform, Artifactory, GitHub Actions</em></p>
+<p>By extensively reviewing deployment code and conducting user surveys, I was able
 to take inventory of current usage patterns and requirements. I then coordinated
 and began executing on a plan while handling a two transitions in ownerships and
 accomodating constantly changing company priorities. This plan involved both
@@ -8,7 +69,11 @@ consolidated use cases behind a bespoke self-service interface and migrated
 those use cases onto a production-grade SaaS deployment. Currently, I am working
 with my team to steadily steward migrating users, while simultaneously
 developing exhaustive documentation and integrations with other Platform
-services to iteratively ease the migration.</p><h1 id=software-engineer--hpe-june-22---sep-24>Software Engineer @ HPE (June &lsquo;22 - Sep &lsquo;24)</h1><h2 id=operationalize-bare-metal-k8s-cluster-for-internal-development>Operationalize bare-metal K8s cluster for internal development</h2><p><em>Related Tech: Ansible, Bare-metal K8s, HPCM, Go, GitHub Actions</em></p><p>To ensure availability requirements, reproducibility, and general operability, I
+services to iteratively ease the migration.</p>
+<h1 id="software-engineer--hpe-june-22---sep-24">Software Engineer @ HPE (June &lsquo;22 - Sep &lsquo;24)</h1>
+<h2 id="operationalize-bare-metal-k8s-cluster-for-internal-development">Operationalize bare-metal K8s cluster for internal development</h2>
+<p><em>Related Tech: Ansible, Bare-metal K8s, HPCM, Go, GitHub Actions</em></p>
+<p>To ensure availability requirements, reproducibility, and general operability, I
 transitioned ownership of a hand-deployed bare-metal K8s cluster running on
 HPCM-managed servers to my team. I took inventory of all current operations and
 users and began by automating both documented and undocumented configuration
@@ -16,14 +81,21 @@ into fully-reproducible baked images. After recreating all the current
 deployment code, I configured GitOps deployment of K8s services using ArgoCD,
 including the deployment of operators for GPU and network drivers, monitoring
 agents, and secrets injection. This effectively brought this critical yet
-abandandoned resource under sustainable management.</p><h2 id=automate-user-onboarding-and-cloud-service-configuration>Automate user onboarding and cloud service configuration</h2><p><em>Related Tech: Ansible, GitHub Actions, Python</em></p><p>As part of a newly formed Infrastructure team, I developed automation to
+abandandoned resource under sustainable management.</p>
+<h2 id="automate-user-onboarding-and-cloud-service-configuration">Automate user onboarding and cloud service configuration</h2>
+<p><em>Related Tech: Ansible, GitHub Actions, Python</em></p>
+<p>As part of a newly formed Infrastructure team, I developed automation to
 idempotently configure our cloud services and onboard new engineers. Due to gaps
 in publicly available tooling, I developed custom Ansible modules to implement
 specific configuration for our GCP projects and GitHub org. I further simplified
 operations by wiring together GitHub actions that ran our pre-commit hooks and
 created PRs for new users with a basic Slackbot modal, enabling hiring managers
 to submit onboarding requests for new engineers without our team being
-interrupted.</p><h1 id=software-engineer-ii--digital-ocean-june-20---june-22>Software Engineer II @ Digital Ocean (June &lsquo;20 - June &lsquo;22)</h1><h2 id=automate-dependency-vendoring-and-version-bumps>Automate dependency vendoring and version bumps</h2><p><em>Related Tech: Concourse, Bash</em></p><p>To reduce the coordination cost of recurring manual dependency-review meetings,
+interrupted.</p>
+<h1 id="software-engineer-ii--digital-ocean-june-20---june-22">Software Engineer II @ Digital Ocean (June &lsquo;20 - June &lsquo;22)</h1>
+<h2 id="automate-dependency-vendoring-and-version-bumps">Automate dependency vendoring and version bumps</h2>
+<p><em>Related Tech: Concourse, Bash</em></p>
+<p>To reduce the coordination cost of recurring manual dependency-review meetings,
 I developed pipelines to automate prerequisite work for upgrades. These
 pipelines would periodically monitor for new dependency versions to vendor
 release artifacts, notify the team of version changes, and create an
@@ -32,7 +104,10 @@ Leveraging Concourse’s available pipeline triggers for GitHub and DockerHub
 releases, I was able to quickly implement update jobs for various release asset
 types including archived binaries and OCI images, covering over half of our
 dependencies and reducing the amount of manual effort involved in our dependency
-reviews.</p><h2 id=migrate-legacy-deployment-code-for-bare-metal-k8s-clusters>Migrate legacy deployment code for bare-metal K8s clusters</h2><p><em>Related Tech: Bare-metal K8s, Chef, Ansible, Python</em></p><p>To remove our team’s dependency on legacy Chef configuration code for our
+reviews.</p>
+<h2 id="migrate-legacy-deployment-code-for-bare-metal-k8s-clusters">Migrate legacy deployment code for bare-metal K8s clusters</h2>
+<p><em>Related Tech: Bare-metal K8s, Chef, Ansible, Python</em></p>
+<p>To remove our team’s dependency on legacy Chef configuration code for our
 bare-metal clusters, I migrated our configuration management to new Ansible
 playbooks. As part of the migration, I identified all code specific to our
 domain from the legacy monorepo, reimplemented whatever was still relevant and
@@ -41,7 +116,10 @@ roles for operations outside of our domain that were still necessary, such as
 security patches published by the Infrastructure team. Aside from the
 opportunity to update and document our bootstrapping process, this new iteration
 of our cluster management code drastically reduced iteration times while also
-enabling targeted configuration of nodes.</p><h2 id=implement-feature-requests-for-internal-k8s-native-app-platform>Implement feature requests for internal K8s-native app platform</h2><p><em>Related Tech: Go, client-go, K8s mutating and admission webhooks, controllers</em></p><p>As part of the Platform team, I was responsible for bug fixes and new features
+enabling targeted configuration of nodes.</p>
+<h2 id="implement-feature-requests-for-internal-k8s-native-app-platform">Implement feature requests for internal K8s-native app platform</h2>
+<p><em>Related Tech: Go, client-go, K8s mutating and admission webhooks, controllers</em></p>
+<p>As part of the Platform team, I was responsible for bug fixes and new features
 for our deployment tooling and K8s services. The projects I took on included
 enabling log scrapping for pods by using mutating webhooks to update resource
 definitions with necessary sidecars and annotations, extending our controller to
@@ -49,23 +127,52 @@ include reconciliation of managed Job resources, and modifying our Custom
 Resources and resource generation code to include versioning annotations that
 enabled rollbacks for app and job definitions through our CLI. Aside from
 leading those projects, I also collaborated daily with other engineers on PR
-reviews, RFC discussions, and fielding help-channel requests.</p><h1 id=cloud-engineer--ultimate-software-jan-16---june-20>Cloud Engineer @ Ultimate Software (Jan &lsquo;16 - June &lsquo;20)</h1><h2 id=develop-an-internal-cloud-agnostic-kubernetes-offering-from-scratch>Develop an internal, cloud-agnostic Kubernetes offering from scratch</h2><p><em>Related Tech: OpenStack, K8s, Rancher, Terraform, Packer, Ansible</em></p><p>As part of the greenfield effort to migrate our deployment platform to
+reviews, RFC discussions, and fielding help-channel requests.</p>
+<h1 id="cloud-engineer--ultimate-software-jan-16---june-20">Cloud Engineer @ Ultimate Software (Jan &lsquo;16 - June &lsquo;20)</h1>
+<h2 id="develop-an-internal-cloud-agnostic-kubernetes-offering-from-scratch">Develop an internal, cloud-agnostic Kubernetes offering from scratch</h2>
+<p><em>Related Tech: OpenStack, K8s, Rancher, Terraform, Packer, Ansible</em></p>
+<p>As part of the greenfield effort to migrate our deployment platform to
 Kubernetes, I collaborated with architects, security specialists, and external
 consultants on initial system requirements and company-wide migration
 strategies. I worked with my team to deliver the initial implementation using
 custom pre-baked cluster node images and a GitOps workflow that provided
 auditable deployment requests. After initial delivery, I also collaborated on
 the testing of a self-service workflow to deploy clusters by leveraging Rancher
-on OpenStack.</p><h2 id=develop-new-deployment-tooling-for-a-legacy-in-house-deployment-service>Develop new deployment tooling for a legacy, in-house deployment service</h2><p><em>Related Tech: OpenStack, Python, GitLab CI, Terraform, Chef</em></p><p>To address recent on-call incidents and instability in our legacy OpenStack
+on OpenStack.</p>
+<h2 id="develop-new-deployment-tooling-for-a-legacy-in-house-deployment-service">Develop new deployment tooling for a legacy, in-house deployment service</h2>
+<p><em>Related Tech: OpenStack, Python, GitLab CI, Terraform, Chef</em></p>
+<p>To address recent on-call incidents and instability in our legacy OpenStack
 deployment API, I onboarded to the service&rsquo;s Python server and the deployment
 automation. By improving logging within the server and replacing the deployment
 process to one leveraging container images to package server code running on
 persistent nodes, we were able to establish a reproducible release process. This
 updated process improved our confidence on further rollouts and allowed us to
-iterate on system stability.</p><h1 id=pre-professional-education>Pre-Professional Education</h1><p>Graduated Fall 2018 from Florida International University with a B.S. in
+iterate on system stability.</p>
+<h1 id="pre-professional-education">Pre-Professional Education</h1>
+<p>Graduated Fall 2018 from Florida International University with a B.S. in
 Computer Science. While working through Bachelor&rsquo;s program, also competed in
 algorithmic problem solving competitions and maintained an extended internship
-at Ultimate Software (now UKG).</p></article></div></div></div><div class=row><footer><hr><p>could you possibly fathom that?
-just winging it all the time?
-<a href=/ title=home>[🏠]</a>
-<a href=# title=up>[🆙]</a></p></footer></div></div></body></html>
+at Ultimate Software (now UKG).</p>
+
+</div>
+
+        </div>
+      </div>
+      
+      <div class="row">
+        <footer>
+  <hr/>
+  <p>
+    could you possibly fathom that?
+    just winging it all the time?
+    <a href="/" title="home">[🏠]</a>
+    <a href="#" title="up">[🆙]</a>
+  </p>
+</footer>
+
+      </div>
+      
+    </div>
+  </body>
+
+</html>
