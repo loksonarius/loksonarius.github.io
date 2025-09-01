@@ -97,6 +97,18 @@ enabling targeted configuration of nodes.
 
 # Cloud Engineer @ Ultimate Software (Jan '16 - June '20)
 
+## Develop new deployment tooling for a legacy, in-house deployment service
+
+_Related Tech: OpenStack, Python, GitLab CI, Terraform, Chef_
+
+To address recent on-call incidents and instability in our legacy OpenStack
+deployment API, I onboarded to the service's Python server and the deployment
+automation. By improving logging within the server and replacing the deployment
+process to one leveraging container images to package server code running on
+persistent nodes, we were able to establish a reproducible release process. This
+updated process improved our confidence on further rollouts and allowed us to
+iterate on system stability.
+
 ## Develop an internal, cloud-agnostic Kubernetes offering
 
 _Related Tech: OpenStack, K8s, Rancher, Terraform, Packer, Ansible_
@@ -109,18 +121,6 @@ custom pre-baked cluster node images and a GitOps workflow that provided
 auditable deployment requests. After initial delivery, I also collaborated on
 the testing of a self-service workflow to deploy clusters by leveraging Rancher
 on OpenStack.
-
-## Develop new deployment tooling for a legacy, in-house deployment service
-
-_Related Tech: OpenStack, Python, GitLab CI, Terraform, Chef_
-
-To address recent on-call incidents and instability in our legacy OpenStack
-deployment API, I onboarded to the service's Python server and the deployment
-automation. By improving logging within the server and replacing the deployment
-process to one leveraging container images to package server code running on
-persistent nodes, we were able to establish a reproducible release process. This
-updated process improved our confidence on further rollouts and allowed us to
-iterate on system stability.
 
 # Pre-Professional Education
 
