@@ -38,15 +38,3 @@ ability to write sentences in general (I can type at least as fast as a
 competent toddler), but moreso my ability to form meaningful sentences. I’m
 giving myself the out to just stop writing and ship a thing. Nothing here has to
 be finished nor good nor usable. I’ll edit published entries to my whim and
-
-> original ending here
-
-I was literally about just leave that as is right there. And I will, but I went
-to console my wife over her woes with aging (we’re not even in our 30’s btw).
-And out of that conversation came a stray idea neither of us cares to develop: a
-spouse quits their job to spend more time at home but starts hyper fixating on
-their family’s personalities and the oddities of their house and these manifests
-as ghostly events that are only real to the them. I dunno, I’ve seen ghosts as
-metaphors for various traumas, and domestic horrors, and the usual trope of
-“husband doesn’t believe the wife about the real ghost haunting their family”,
-but haven’t seen this intersection. Maybe it’s a lame idea, but idk

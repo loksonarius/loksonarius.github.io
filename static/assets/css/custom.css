@@ -114,6 +114,29 @@ footer {
   text-align: right;
 }
 
+/* Resume
+--------------------- */
+#resume h1 {
+  font-size: 3rem;
+}
+
+#resume h2 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+#resume h2+p {
+  margin-bottom: 1rem;
+}
+
+#resume h3 {
+  font-size: 1.5rem;
+}
+
+#resume p {
+  text-align: left;
+}
+
 /* Tag Cloud
 --------------------- */
 .tag-cloud {

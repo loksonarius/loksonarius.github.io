@@ -16,3 +16,6 @@ menu:
       params:
         includes:
           - tags
+    - name: resume
+      pageRef: /resume
+      weight: 20
