@@ -13,7 +13,7 @@ _Related Tech: Terraform, Artifactory, GitHub Actions_
 By extensively reviewing deployment code and conducting user surveys, I was able
 to take inventory of current usage patterns and requirements. I then coordinated
 and began executing on a plan while handling a two transitions in ownerships and
-accomodating constantly changing company priorities. This plan involved both
+accommodating constantly changing company priorities. This plan involved both
 consolidated use cases behind a bespoke self-service interface and migrated
 those use cases onto a production-grade SaaS deployment. Currently, I am working
 with my team to steadily steward migrating users, while simultaneously
@@ -34,7 +34,7 @@ into fully-reproducible baked images. After recreating all the current
 deployment code, I configured GitOps deployment of K8s services using ArgoCD,
 including the deployment of operators for GPU and network drivers, monitoring
 agents, and secrets injection. This effectively brought this critical yet
-abandandoned resource under sustainable management.
+abandoned resource under sustainable management.
 
 ## Automate user onboarding and cloud service configuration
 
@@ -50,6 +50,20 @@ to submit onboarding requests for new engineers without our team being
 interrupted.
 
 # Software Engineer II @ Digital Ocean (June '20 - June '22)
+
+## Implement feature requests for internal K8s-native app platform
+
+_Related Tech: Go, client-go, K8s mutating and admission webhooks, controllers_
+
+As part of the Platform team, I was responsible for bug fixes and new features
+for our deployment tooling and K8s services. The projects I took on included
+enabling log scrapping for pods by using mutating webhooks to update resource
+definitions with necessary sidecars and annotations, extending our controller to
+include reconciliation of managed Job resources, and modifying our Custom
+Resources and resource generation code to include versioning annotations that
+enabled rollbacks for app and job definitions through our CLI. Aside from
+leading those projects, I also collaborated daily with other engineers on PR
+reviews, RFC discussions, and fielding help-channel requests.
 
 ## Automate dependency vendoring and version bumps
 
@@ -81,23 +95,9 @@ opportunity to update and document our bootstrapping process, this new iteration
 of our cluster management code drastically reduced iteration times while also
 enabling targeted configuration of nodes.
 
-## Implement feature requests for internal K8s-native app platform
-
-_Related Tech: Go, client-go, K8s mutating and admission webhooks, controllers_
-
-As part of the Platform team, I was responsible for bug fixes and new features
-for our deployment tooling and K8s services. The projects I took on included
-enabling log scrapping for pods by using mutating webhooks to update resource
-definitions with necessary sidecars and annotations, extending our controller to
-include reconciliation of managed Job resources, and modifying our Custom
-Resources and resource generation code to include versioning annotations that
-enabled rollbacks for app and job definitions through our CLI. Aside from
-leading those projects, I also collaborated daily with other engineers on PR
-reviews, RFC discussions, and fielding help-channel requests.
-
 # Cloud Engineer @ Ultimate Software (Jan '16 - June '20)
 
-## Develop an internal, cloud-agnostic Kubernetes offering from scratch
+## Develop an internal, cloud-agnostic Kubernetes offering
 
 _Related Tech: OpenStack, K8s, Rancher, Terraform, Packer, Ansible_
 
