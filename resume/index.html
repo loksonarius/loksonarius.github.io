@@ -2,7 +2,7 @@
 For the one pager, <a href=/assets/pdf/resume.pdf>see my rendered resume</a>.</p></div><div id=resume class=row><h1 id=senior-software-engineer--lambda-sep-24---present>Senior Software Engineer @ Lambda (Sep &lsquo;24 - Present)</h1><h2 id=consolidate-usage-of-artifactory-behind-a-bespoke-self-service-interface>Consolidate usage of Artifactory behind a bespoke self-service interface</h2><p><em>Related Tech: Terraform, Artifactory, GitHub Actions</em></p><p>By extensively reviewing deployment code and conducting user surveys, I was able
 to take inventory of current usage patterns and requirements. I then coordinated
 and began executing on a plan while handling a two transitions in ownerships and
-accomodating constantly changing company priorities. This plan involved both
+accommodating constantly changing company priorities. This plan involved both
 consolidated use cases behind a bespoke self-service interface and migrated
 those use cases onto a production-grade SaaS deployment. Currently, I am working
 with my team to steadily steward migrating users, while simultaneously
@@ -15,14 +15,22 @@ into fully-reproducible baked images. After recreating all the current
 deployment code, I configured GitOps deployment of K8s services using ArgoCD,
 including the deployment of operators for GPU and network drivers, monitoring
 agents, and secrets injection. This effectively brought this critical yet
-abandandoned resource under sustainable management.</p><h2 id=automate-user-onboarding-and-cloud-service-configuration>Automate user onboarding and cloud service configuration</h2><p><em>Related Tech: Ansible, GitHub Actions, Python</em></p><p>As part of a newly formed Infrastructure team, I developed automation to
+abandoned resource under sustainable management.</p><h2 id=automate-user-onboarding-and-cloud-service-configuration>Automate user onboarding and cloud service configuration</h2><p><em>Related Tech: Ansible, GitHub Actions, Python</em></p><p>As part of a newly formed Infrastructure team, I developed automation to
 idempotently configure our cloud services and onboard new engineers. Due to gaps
 in publicly available tooling, I developed custom Ansible modules to implement
 specific configuration for our GCP projects and GitHub org. I further simplified
 operations by wiring together GitHub actions that ran our pre-commit hooks and
 created PRs for new users with a basic Slackbot modal, enabling hiring managers
 to submit onboarding requests for new engineers without our team being
-interrupted.</p><h1 id=software-engineer-ii--digital-ocean-june-20---june-22>Software Engineer II @ Digital Ocean (June &lsquo;20 - June &lsquo;22)</h1><h2 id=automate-dependency-vendoring-and-version-bumps>Automate dependency vendoring and version bumps</h2><p><em>Related Tech: Concourse, Bash</em></p><p>To reduce the coordination cost of recurring manual dependency-review meetings,
+interrupted.</p><h1 id=software-engineer-ii--digital-ocean-june-20---june-22>Software Engineer II @ Digital Ocean (June &lsquo;20 - June &lsquo;22)</h1><h2 id=implement-feature-requests-for-internal-k8s-native-app-platform>Implement feature requests for internal K8s-native app platform</h2><p><em>Related Tech: Go, client-go, K8s mutating and admission webhooks, controllers</em></p><p>As part of the Platform team, I was responsible for bug fixes and new features
+for our deployment tooling and K8s services. The projects I took on included
+enabling log scrapping for pods by using mutating webhooks to update resource
+definitions with necessary sidecars and annotations, extending our controller to
+include reconciliation of managed Job resources, and modifying our Custom
+Resources and resource generation code to include versioning annotations that
+enabled rollbacks for app and job definitions through our CLI. Aside from
+leading those projects, I also collaborated daily with other engineers on PR
+reviews, RFC discussions, and fielding help-channel requests.</p><h2 id=automate-dependency-vendoring-and-version-bumps>Automate dependency vendoring and version bumps</h2><p><em>Related Tech: Concourse, Bash</em></p><p>To reduce the coordination cost of recurring manual dependency-review meetings,
 I developed pipelines to automate prerequisite work for upgrades. These
 pipelines would periodically monitor for new dependency versions to vendor
 release artifacts, notify the team of version changes, and create an
@@ -40,15 +48,7 @@ roles for operations outside of our domain that were still necessary, such as
 security patches published by the Infrastructure team. Aside from the
 opportunity to update and document our bootstrapping process, this new iteration
 of our cluster management code drastically reduced iteration times while also
-enabling targeted configuration of nodes.</p><h2 id=implement-feature-requests-for-internal-k8s-native-app-platform>Implement feature requests for internal K8s-native app platform</h2><p><em>Related Tech: Go, client-go, K8s mutating and admission webhooks, controllers</em></p><p>As part of the Platform team, I was responsible for bug fixes and new features
-for our deployment tooling and K8s services. The projects I took on included
-enabling log scrapping for pods by using mutating webhooks to update resource
-definitions with necessary sidecars and annotations, extending our controller to
-include reconciliation of managed Job resources, and modifying our Custom
-Resources and resource generation code to include versioning annotations that
-enabled rollbacks for app and job definitions through our CLI. Aside from
-leading those projects, I also collaborated daily with other engineers on PR
-reviews, RFC discussions, and fielding help-channel requests.</p><h1 id=cloud-engineer--ultimate-software-jan-16---june-20>Cloud Engineer @ Ultimate Software (Jan &lsquo;16 - June &lsquo;20)</h1><h2 id=develop-an-internal-cloud-agnostic-kubernetes-offering-from-scratch>Develop an internal, cloud-agnostic Kubernetes offering from scratch</h2><p><em>Related Tech: OpenStack, K8s, Rancher, Terraform, Packer, Ansible</em></p><p>As part of the greenfield effort to migrate our deployment platform to
+enabling targeted configuration of nodes.</p><h1 id=cloud-engineer--ultimate-software-jan-16---june-20>Cloud Engineer @ Ultimate Software (Jan &lsquo;16 - June &lsquo;20)</h1><h2 id=develop-an-internal-cloud-agnostic-kubernetes-offering>Develop an internal, cloud-agnostic Kubernetes offering</h2><p><em>Related Tech: OpenStack, K8s, Rancher, Terraform, Packer, Ansible</em></p><p>As part of the greenfield effort to migrate our deployment platform to
 Kubernetes, I collaborated with architects, security specialists, and external
 consultants on initial system requirements and company-wide migration
 strategies. I worked with my team to deliver the initial implementation using
