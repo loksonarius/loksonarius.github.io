@@ -10,7 +10,7 @@ I made my GitHub account back in Summer of 2014, and not once in over a decade h
 It's not like it costs me money or anything, but once the thought of cleaning up my repositories came to mind, it's been taking up the few spare neurons I can afford.
 With 12 years of history built-up, I'll take the opportunity to digest and look back on what I had going on through the years.
 
-## neko (2019) and rsnake (2019)
+# neko (2019) and rsnake (2019)
 
 Before GitHub, I was actually doing everything in BitBucket.
 While I could go back there and dig up even earlier memories, I think I'm fine leaving that litter to join the sediment.
@@ -32,7 +32,7 @@ My writing still betrays my lack of mental structure, and so I'll wait to write 
 
 I have nothing else from these projects to show besides one really brief mantra, but that alone made these projects worthwhile to me.
 
-## gli (2020)
+# gli (2020)
 
 At my first job, my team's composition had a mix of support engineers and developers.
 This was driven by it being a platform team, having to balance planned development goals with unplanned support work.
@@ -56,7 +56,7 @@ While I wouldn't recreate this kind of tooling today at all, I do seriously envy
 Better problem solving requires more time and investment, but this consequently makes iterating on the skill way slower.
 My success rate has gone up over time, but I feel I should find some way getting faster at it.
 
-## splatoon2-gear-planner (2020)
+# splatoon2-gear-planner (2020)
 
 I remember playing the Splatoon series up through just recently.
 Seeing that this repo was originally made in 2020, and that it's for the sequel makes me pause at the disconnect.
@@ -79,7 +79,7 @@ Either my technical competency was drastically missing, or I'd take on a problem
 Stumbling through those stints was rough, but it was definitely for the better.
 It was a totally safe environment to ambtiously flail around in, and that's just a setup for learning.
 
-## ldj46 (2020)
+# ldj46 (2020)
 
 I am so crazy proud of this project.
 I was coming out from a large stint of what felt like stagnation in my personal and professional life.
@@ -105,7 +105,7 @@ I've lived with almost constant nostalgia at how much time I'd spend with my hob
 It always seems like I'm doing less of what I love, despite objectively having more time than I ever did before.
 I guess that just speaks to how good time is at grinding down my memory and bringing what I value into focus.
 
-## finite-terrain-generation (2020)
+# finite-terrain-generation (2020)
 
 This was towards the end of the same era as ldj46.
 I was working on various small projects with the mindset of making smaller games.
@@ -126,7 +126,7 @@ The dopamine hit of seeing people _possibly_ finding my work helpful was frankly
 This was honestly the last time I'd used Godot, and I haven't kept up well with it over the years.
 I still feel incredibly eager to return to this kind of devlepment.
 
-## mcsm (2020) and bedrock-server-versions (2021)
+# mcsm (2020) and bedrock-server-versions (2021)
 
 These projects are just hilarious to me now.
 So, the pitch is basically: I'm gonna write a super-selfishly designed suite of software for deploying and managing Minecraft servers.
@@ -154,32 +154,88 @@ So entirely by accident, I did end up writing something helpful and novel after 
 I mean, honestly, it's all just silly in hindsight.
 I'm glad I went through the misguided trouble, just for the modest chuckle I can pull from it to this day.
 
-## wanikani-userscripts (2020)
+# wanikani-userscripts (2020)
 
-It’s really unexpected that the most used of my projects is this one. Not since writing toy projects in three.js have I touched Javascript. I also have no deep understanding of web browser processes. It is through straight brute force iteration that I knocked out the first update to these userscripts.
+I'm not much of a power user, sticking with default browser settings and addons for most of everything.
+Generally, my threshold for frustration is incredibly high when it comes to leaving the vanilla path for tools.
 
-It’s a really nice seeing that same desire to be helpful with my skillset come out on this repo where it was otherwise unmet with all the Splatoon projects. Roughly half my contribution was just coordination and support on the WaniKani forums for these userscripts and others.
+WaniKani's interface is honestly great in my opinion.
+The only issue is that it's the kind of tool I'll be spending extensive hours with.
+In my case, the typo tolerance and default sorting algorithms are what chipped at me till I met my threshold.
+Browsing userscript plugins in the forums, I found that what I need was out of maintenance.
+As unfortunate as that was, I was already past my threshold on annoyance, so I readily resigned myself to figuring it out.
 
-Thinking back on all the work I did for this project, I think I’d taken for granted the amount of skills and experience I’d gained from it.
+I've got basically minimal experience developing for browsers and working in that system.
+So the first barrier was getting started whatsoever.
+That one wasn't too bad thanks to starting from a fork and having GreaseMonkey's helpful documentation to orient myself.
+I never setup a test environment more evolved than loading my script on a live session and testing changes out as I made them.
+It was super primitive iteration, and it was super slow too.
+Ironically, my distaste for working with this technology made gave me the focus to stick it out and bee-line my end state.
 
-I’ve not worked on these userscripts in years as I’ve moved from WaniKani to Anki, so I’m archiving these repos as they’re very likely broken in many subtle ways after years of updates.
+Another big step for me was doing all the communication work involved in releasing my fork.
+I recall thanking the original author and letting them know I was forking the project to continue maintenance.
+Then I set up the GitHub repo and script metadata to pull updates from GitHub.
+Then setting up a new thread in the WaniKani forums with install instructions, announcements, support steps, and all of that.
 
-## nixin (2024), station-setup (2022), and workstation-setup (2019)
+It's nothing nutty, but coming from working in pretty insulated Platform teams, this kind of work was entirely novel to me.
+It's also deeply valuable, and I'm glad working on all of this forced me to stretch those muscles independently.
 
+Out of all my OSS work, this is likely my most impactful and widely-used.
+I've long fallen off of WaniKani in favor of Anki, and subsequent WaniKani updates would continually break userscripts.
+I never went through a formal deprecation process for this project, but hopefully the bit rot has made it clear it's no longer living software.
 
-This was likely the healthiest instance of “taking my work home” I’ve had. At my job, I was working with a really mature offering of Chef cookbooks and appliance tooling. Through whatever intuition, I felt that despite the technical excellence of our implementation, I’d be entirely unable to cary any of it with me to another job. I’m still chasing the high of that configuration management offering, but at least I’ve grown grossly comfortable with Ansible and been able to carry a lot of lessons from that offering into my future jobs.
+# nixin (2024), station-setup (2022), and workstation-setup (2019)
 
-I can also appreciate that diving deep into Ansible (not necessarily in this repo, but across all my Ansible work) gave me exposure to more theoretical considerations about configuration management as a practice. That exposure has repeatedly paid off in a practical sense, but it’s also prompted my growth and expansion into other kinds of tooling such as Nix.
+I've got some intense discomfort with the idea of configuration drift on my machines.
+Windows hurt me the hardest while I still used it, but it's a bother on all my machines.
 
-## nixin (2024)
+The first big step to addressing that for me was automating the initial configuration for all my workstations.
+I was trying to learn Ansible at the time, and when I learned enough about what it supported, I started ripping on custom roles.
+The idea was to have a repo I could download on any machine, run a bootstrap script, after which I could run re-runnable and idempotent configuration management.
 
-Aside from being my first attempt at “getting Nix”, this was also a really good instance of me using writing to digest what I work on. While future iterations of this same repo were private (I’m on gen 4 right now of “my nix monorepo” actually), they all still have the kind of really verbose write up I have in the README. Actually, on gen 3 of this whole thing, I actually wrote tooling in the repo to generate a book as documentation for concepts I created in the repo. I’ve not read that book even once, but the gains I get just writing those things out are just too good.
+On the first attempt, I got that much done. I could run in on Linux machines, MacBooks, WSL environments, and even some servers.
+It was so _so_ far from ideal, but it was also such a huge step up that it didn't matter to me.
 
-As for Nix, honestly, I think I’m ahead of the curve in exploring the ecosystem. I’m obviously a layman compared to those developing serious tooling and using Nix professionally. That said, I’m still in (what feels like) the minority of engineers leveraging Nix. It’s a treat when I find another one in the wild, outside the Nix forums, and I see their cool little nixos repos with their custom tooling and derivations.
+There's absolutely a world where I would have invested even further in solving this with Ansible.
+Baking installer images, writing reusable roles and tests for those roles, custom Ansible providers for what I had missing, and so much more.
 
-I dunno, maybe it’ll have all been a waste of time in hindsight, but I’m gonna sip this koolaid till it hurts.
+Thankfully, that wasn't this reality.
+The amount of work it takes to extend Ansible (and Chef and other drift-correcting technology) is simply way too large for what I could have maintained for personal use.
+It's fortunate for me that I was exposed to the Nix ecosystem when I did, because it basically achieves everything I wanted from its construction.
 
+The evolution of my Ansible repos were primarily structural improvements more than anything.
+I'm on the 4th iteration of my Nix repos, and the changes between each have been nearly fundamental.
+I'd started working on NixOS definitions with suppport for secrets and home-manager configs.
+But each new concept and tool I needed as I improved my understanding and ambitions required I fundamentally rethink my repos to fit them naturally.
 
-## the rest
+The latest version I have now is a monorepo of _everything_.
+It's a private repo I haven't published (at least not yet), but I'm working on tooling and structure that allows me to reuse the entirety of my work.
+The structure, and privacy settings, are entirety antithetical to the OSS principles I'd been working with to-date.
 
-I’ve also found a smattering of private repos and previous archives, but honestly none of em are really worth reminiscing on — much less write about publicly. This was a good exercise. I’ll do another in a few years and see how it goes.
+This decision comes from a growing feeling of pessimism about my industry and the value of OSS.
+I'm exploring what it's like to keep this kind of personal work private and seeing if the benefits feel worthwhile to me.
+
+The pessimism I have for things now is still minor to the overwhelming optimism I feel for the technology I use.
+Even if I never make my monorepo public, I'll still be looking for opportunities to publish my work and collaborate with others.
+
+I'm honestly hoping to do so by being more intentional with my publishing and effective with my communication.
+
+# the rest
+
+I had a smattering of private repos and forks and some other cruft in my account as well.
+Those were honestly not worth writing about, so I skipped those after giving them some thought.
+After writing basic notes on each one, the ones above were the ones that felt actually meaningful.
+
+Those repos were meaningful because of the time I put into them or because of the time at which I was working on them.
+It's cool looking over the each, and getting taken back to the context in which they were written.
+
+I do actually do more than just program in my free time.
+Programming and engineering are just such large parts of my life and identity that they make a good proxy for reminiscing on my life as a whole.
+This exercise brought me some good clarity on my recent professional life and project history.
+
+This is also the largest non-technical document I've written in a good bit.
+Iterating from notes, to drafts, to revisions has been really meditative.
+It's really nice watching my thoughts get progressively clearer and better sorted as I keep thinking on things.
+
+Maybe I'll do this again in 10 years, or I'll do a write up for some of my more creative work.
+At least for now, it's pretty clear to I should be spending the time I have doing work that'll be worth looking back on.
