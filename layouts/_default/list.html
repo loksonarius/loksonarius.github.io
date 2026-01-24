@@ -36,7 +36,7 @@
   <div id="posts" class="eight columns">
     <ul>
 
-    {{ range .Pages.ByPublishDate }}
+    {{ range .Pages.ByPublishDate.Reverse }}
       <li>
         <a class="post-link" href="{{ .Permalink }}" title="{{ .Title }}">"{{ .Title }}"</a>
         <span class="post-date">{{ .Params.Date.Format "2006, Jan 02" }}</span>
