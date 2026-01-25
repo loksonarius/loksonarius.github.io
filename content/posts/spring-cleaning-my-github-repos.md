@@ -2,7 +2,7 @@
 title = 'Spring Cleaning my GitHub Repos'
 date = 2026-01-23T00:44:36-05:00
 tags = ['personal', 'tech', 'engineering']
-draft = true
+draft = false
 +++
 
 I made my GitHub account back in Summer of 2014, and not once in over a decade have I taken a moment to purge it.
