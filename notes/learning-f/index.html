@@ -1,0 +1,73 @@
+
+        <!doctype html>
+        <html>
+        <head>
+<link rel="stylesheet" href="/assets/css/0_colors.css">
+<link rel="stylesheet" href="/assets/css/0_fonts.css">
+<link rel="stylesheet" href="/assets/css/1_simple.css">
+<link rel="stylesheet" href="/assets/css/2_overrides.css">
+<link rel="stylesheet" href="/assets/css/3_custom.css">
+<link rel="ico" type="image/x-icon" href="/favicon.ico">
+<meta name="generator" content="hatome">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<title>hato.me</title></head>
+        <body><main>
+
+<div class="note">
+  <header>
+    
+    <h1>"Learning F#"</h1>
+    
+    <span class="tag">programming</span>
+  </header>
+
+  <article>
+    <p>_ operator is really cool</p>
+<p>Railway oriented programming
+Domain types vs processing layer</p>
+<p>OOP libraries are really uncomfortable
+Need to keep remembering that dotnet is a runtime, CLI and CLR</p>
+<p>Managing fine without visual studio so far</p>
+<h1 id="building-dotnet-solution-with-flake-parts">building dotnet solution with flake-parts</h1>
+<pre><code class="language-bash">dotnet restore --packages out
+nix run nixpkgs#nuget-to-json -- out &gt; deps.json
+rm -rf out
+</code></pre>
+<pre><code class="language-nix">{ ... }:
+{
+  perSystem =
+    { pkgs, lib, ... }:
+    {
+      packages.mono-dotnet = pkgs.buildDotnetModule {
+        name = &quot;mono&quot;;
+
+        dotnet-sdk = pkgs.dotnetCorePackages.sdk_10_0;
+        dotnet-runtime = pkgs.dotnetCorePackages.runtime_10_0;
+        buildInputs = [ ];
+
+        nugetDeps = ./../deps.json;
+
+        src = ./..;
+        projectFile = &quot;mono.slnx&quot;;
+      };
+    };
+}
+</code></pre>
+
+  </article>
+</div>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="/projects">Projects</a>
+    <a aria-current="location" href="/notes">Notes</a>
+    <a href="/posts">Posts</a>
+    <a href="/">Home</a>
+ </nav>
+</footer>
+
+</body>
+        </html>
+        

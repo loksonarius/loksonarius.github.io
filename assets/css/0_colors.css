@@ -1,0 +1,94 @@
+/* Colors */
+/* :root { */
+ /* --color-1-raw: 46 56 56; */
+ /* --color-1: rgb(var(--color-1-raw)); */
+ /* --color-2-raw: 246 246 223; */
+ /* --color-2: rgb(var(--color-2-raw)); */
+ /* --color-3-raw: 202 83 93; */
+ /* --color-3: rgb(var(--color-3-raw)); */
+/* } */
+
+/* Patterns */
+/* :root { */
+  /* Scanlines */
+  /* --pattern-scan-gap: 2px; */
+  /* --pattern-scan-width: 4px; */
+  /* --pattern-scan-size: calc(var(--pattern-scan-gap) + var(--pattern-scan-width)); */
+  /* --pattern-scan-color: var(--color-1); */
+  /* --pattern-scan: */
+    /* linear-gradient( */
+        /* var(--pattern-scan-color) var(--pattern-scan-width), */
+        /* transparent var(--pattern-scan-width) */
+      /* ) 0.00px 0.00px / var(--pattern-scan-size) var(--pattern-scan-size); */
+
+  /* Triangle Dither */
+  /* --pattern-dither-gap: 2px; */
+  /* --pattern-dither-width: 4px; */
+  /* --pattern-dither-size: calc(var(--pattern-dither-gap) + var(--pattern-dither-width)); */
+  /* --pattern-dither-color: var(--color-1); */
+  /* --pattern-dither: */
+    /* linear-gradient( */
+        /* 45deg, */
+        /* var(--pattern-dither-color) var(--pattern-dither-width), */
+        /* transparent var(--pattern-dither-width) */
+      /* ) 0.00px 0.00px / var(--pattern-dither-size) var(--pattern-dither-size); */
+/* } */
+
+  /* --pattern-dots-color: var(--midnight-violet); */
+  /* --pattern-dots-size: 1.0px; */
+  /* --pattern-dots-gap: 4.0px; */
+  /* --pattern-dots-fill: calc(var(--pattern-dots-size)+var(--pattern-dots-gap)); */
+  /* --pattern-dots: */
+    /* radial-gradient( */
+      /* circle,rgba(0,0,0,1.000) var(--pattern-dots-size),transparent calc(var(--pattern-dots-size)+0.55px) */
+    /* ) 0.00px 0.00px / var(--pattern-dots-fill) var(--pattern-dots-fill); */
+
+  /* Hatch */
+  /* --hatch-bg: var(--shadow-grey); */
+  /* --hatch-thickness: 0.6px; */
+  /* --hatch-major-color: rgba(0,0,0,0.3); */
+  /* --hatch-minor-color: rgba(0,0,0,0.5); */
+  /* --hatch-minor-size: 1px; */
+  /* --hatch-major-size: 4px; */
+  /* --dark-hatch: */
+    /* linear-gradient( */
+        /* var(--hatch-minor-color) var(--hatch-thickness), transparent var(--hatch-thickness) */
+      /* ) 0.00px 0.00px / var(--hatch-minor-size) var(--hatch-minor-size), */
+    /* linear-gradient(90deg,var(--hatch-minor-color) var(--hatch-thickness), transparent var(--hatch-thickness)) 0.00px 0.00px / var(--hatch-minor-size) var(--hatch-minor-size), */
+    /* linear-gradient(var(--hatch-major-color) var(--hatch-thickness), transparent var(--hatch-thickness)) 0.00px 0.00px / var(--hatch-major-size) var(--hatch-major-size), */
+    /* linear-gradient(var(--hatch-major-color) var(--hatch-thickness), transparent var(--hatch-thickness)) 0.00px 0.00px / var(--hatch-major-size) var(--hatch-major-size) */
+    /* linear-gradient(90deg,var(--hatch-major-color) var(--hatch-thickness), transparent var(--hatch-thickness)) 0.00px 0.00px / var(--hatch-major-size) var(--hatch-major-size) */
+    /* rgba(0,0,0,0); */
+/* } */
+
+/* @media (prefers-color-scheme: light) { */
+  /* :root { */
+    /* --color-primary: var(--ivory); */
+    /* --color-primary-light: var(--vanilla-custard); */
+
+    /* --color-secondary: var(--dusty-taupe); */
+    /* --color-secondary-light: var(--taupe); */
+
+    /* --color-accent: var(--evergreen-dark); */
+    /* --color-accent-light: var(--evergreen); */
+
+    /* --color-text: var(--midnight-violet); */
+    /* --color-text-light: var(--shadow-grey); */
+  /* } */
+/* } */
+
+/* @media (prefers-color-scheme: dark) { */
+  /* :root { */
+    /* --color-primary: var(--ivory); */
+    /* --color-primary-light: var(--vanilla-custard); */
+
+    /* --color-secondary: var(--dusty-taupe); */
+    /* --color-secondary-light: var(--taupe); */
+
+    /* --color-accent: var(--evergreen-dark); */
+    /* --color-accent-light: var(--evergreen); */
+
+    /* --color-text: var(--midnight-violet); */
+    /* --color-text-light: var(--shadow-grey); */
+  /* } */
+/* } */

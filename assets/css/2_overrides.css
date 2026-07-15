@@ -1,0 +1,43 @@
+/* Fonts
+-------------------- */
+:root {
+  --sans-font: "Jersey 20", sans-serif;
+  --serif-font: "Jersey 20", serif;
+  --mono-font: "VT323", monospace;
+}
+
+/* Colors
+-------------------- */
+/* :root { */
+  /* --bg: var(--color-primary); */
+  /* --text: var(--color-text); */
+  /* --accent: var(--color-accent); */
+
+  /* --bg: var(--color-primary); */
+  /* --accent-bg: var(--color-primary-light); */
+
+  /* --text: var(--color-text); */
+  /* --text-light: var(--color-text-light); */
+
+  /* --border: var(--color-secondary); */
+
+  /* --accent: var(--color-accent); */
+  /* --accent-hover: var(--color-accent-light); */
+
+  /* --code: var(--color-text); */
+  /* --preformatted: var(--color-text); */
+  /* --marked: var(--color-accent); */
+  /* --disabled: var(--color-accent); */
+/* } */
+
+/* Containers
+-------------------- */
+/* section { */
+  /* padding-top: 0; */
+  /* padding-bottom: 0; */
+/* } */
+
+/* footer { */
+  /* margin-top: 0px; */
+  /* border: none; */
+/* } */
