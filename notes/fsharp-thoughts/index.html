@@ -1,0 +1,105 @@
+
+        <!doctype html>
+        <html>
+        <head>
+<link rel="stylesheet" href="/assets/css/0_colors.css">
+<link rel="stylesheet" href="/assets/css/0_fonts.css">
+<link rel="stylesheet" href="/assets/css/1_simple.css">
+<link rel="stylesheet" href="/assets/css/2_overrides.css">
+<link rel="stylesheet" href="/assets/css/3_custom.css">
+<link rel="ico" type="image/x-icon" href="/favicon.ico">
+<meta name="generator" content="hatome">
+<meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+<title>hato.me</title></head>
+        <body><main>
+
+<div class="note">
+  <header>
+    
+    <h1>Thoughts on F#</h1>
+    
+    <span class="tag">programming</span>
+  </header>
+
+  <hr>
+
+  <article>
+    <h1 id="operator">_ Operator</h1>
+<p>The <code>_</code> operator is really cool, an periodically trips me up in its usage.
+I've learned to combine it by using the <code>&gt;&gt;</code> operator.
+So there's some <code>List.map</code> operations like</p>
+<pre><code class="language-f#">List.map (_.Name&gt;&gt;_.ToLowercase()&gt;&gt;_.Trim())
+</code></pre>
+<p>Which isn't short, but I'm already tired of the <code>fun -&gt; ...</code> pattern everywhere I need to spot-process an item.</p>
+<h1 id="railway-oriented-programming">Railway Oriented Programming</h1>
+<p>I read about this on <a href="https://fsharpforfunandprofit.com/rop/">the fun and profit website</a>, but haven't found a good spot to apply it.
+I was trying to implement this pattern in a pipeline that performed repeated transforms on HTML documents, but I don't think I did so very well.
+The pattern of repeated <code>Result.bind</code> and <code>Result.map</code> was not doing it for me.</p>
+<p>I'm also re-considering my opinions on <code>try</code> and <code>failwith</code> for for exception handling.
+The ability to pattern match Exceptions and wrap Exceptions into Results and Options might address my discomfort with <code>try..catch</code> patterns from OOP languages.
+It seems really cool to use exception throwing more readily and implement catching at the Domain boundary, instead of passing Results around as if they were Go errors.</p>
+<h1 id="write-your-own-library">Write Your Own Library</h1>
+<p>The libraries I've been able to interact with that are written specifically for F# are absolutely delightful.
+<a href="https://suave.io/">Suave</a> has been really delightful to use and configure in particular.</p>
+<p>There's some .NET libraries, like <a href="https://xoofx.github.io/markdig/">Markdig</a>, that've been fine to use, and really easy to nestle into F# modules.
+But then there's some libraries, like HTML AgilityPack, that feel simply insane to inter-op with.</p>
+<p>I may not have enough experience with F# yet, and maybe there's a much more pragmatic way to leverage Objects and mutable structures that I'm not privy to.
+Until my tastes change, I'd like my libraries and datastructures to act immutably and work really well with chained operations.
+I'd tried 4 or so different ways of leveraging AgilityPack's Document objects, but did not stop stubbing my toes until I wrapped up my own <code>HTML</code> module that implemented immutable operations on a custom <code>Node</code> type.</p>
+<p>I'll probably keep trying this approach of wrapping external libraries in my own &quot;functional-style&quot; libraries going forward.</p>
+<h1 id="editing-and-compiling">Editing and Compiling</h1>
+<p>Years ago, I'd used C# at work. At that time, the only option I had was Visual Studio (not Code) on Windows.
+I was still pretty green and the .NET stack felt positively impenetrable.
+This was all during peak OOP megaliths and well before dotnet-core.
+A large part of my disdain for .NET at the time was this whole forced ecosystem.</p>
+<p>To skip the history of something I wasn't around for, I will say things are pretty nice now.
+I'm making do just fine with nix as my build system and helix as my editor.
+I've got a devshell with all the language tooling and project dependencies, and it all works really well.</p>
+<h1 id="building-with-flake-parts">Building with flake-parts</h1>
+<p>Nuget packages are pulled in and hashed out-of-band.
+Using <code>deps.json</code> as a lockfile for Nuget packages.
+We can generate, and re-generate this lockfile using:</p>
+<pre><code class="language-bash">dotnet restore --packages out
+nix run nixpkgs#nuget-to-json -- out &gt; deps.json
+rm -rf out
+</code></pre>
+<p>I collect all my .NET projects within a single <code>mono</code> solution.
+I then have a singular top-level nix package that builds the entire solution, with all projects included.</p>
+<pre><code class="language-nix">{ ... }:
+{
+  perSystem =
+    { pkgs, lib, ... }:
+    {
+      packages.mono-dotnet = pkgs.buildDotnetModule {
+        name = &quot;mono&quot;;
+
+        dotnet-sdk = pkgs.dotnetCorePackages.sdk_10_0;
+        dotnet-runtime = pkgs.dotnetCorePackages.runtime_10_0;
+        buildInputs = [ ];
+
+        nugetDeps = ./../deps.json;
+
+        src = ./..;
+        projectFile = &quot;mono.slnx&quot;;
+      };
+    };
+}
+</code></pre>
+
+  </article>
+</div>
+
+</main>
+
+<footer>
+  <nav>
+    <a href="/projects">Projects</a>
+    <a aria-current="location" href="/notes">Notes</a>
+    <a href="/posts">Posts</a>
+    <a href="/">Home</a>
+ </nav>
+</footer>
+
+</body>
+        </html>
+        
